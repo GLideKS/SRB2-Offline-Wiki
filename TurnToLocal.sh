@@ -27,4 +27,6 @@ for f in *.html; do
     echo "Processed: $new_name"
 done
 
-echo "HTML to local done."
+mv * "../SRB2 Wiki"
+
+echo "HTML to local done. Moved to SRB2 Wiki folder."
