@@ -1086,7 +1086,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <p><i>Hook format</i>: <code>addHook("PreThinkFrame", <i>functionname</i>)</code>
 <p><i>Function format</i>: <code>function()</code>
 <p>Executes once every beginning of the game tic, before all other thinkers,<code><a class=mw-selflink-fragment href=#PreThinkFrame>PreThinkFrame</a></code>, <code><a href=#ThinkFrame>ThinkFrame</a></code> and gamelogic have been run for the current tic.
-<p>This timing is especially useful for editing <a href=Userdata_structures.html#ticcmd_t class=mw-redirect title="Userdata structures">player inputs</a>, because at that point no thinkers have used them yet.
+<p>This timing is especially useful for editing <a href=Lua_Userdata_structures.html#ticcmd_t class=mw-redirect title="Userdata structures">player inputs</a>, because at that point no thinkers have used them yet.
 </p>
 <h4><span class=mw-headline id=PostThinkFrame>PostThinkFrame</span></h4>
 <p><i>Hook format</i>: <code>addHook("PostThinkFrame", <i>functionname</i>)</code>
@@ -1403,7 +1403,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <p><i>Hook format</i>: <code>addHook("PlayerCmd", <i>functionname</i>)</code>
 <p><i>Function format</i>: <code>function(<font size=1>player_t</font> <i>player, <font size=1>ticcmd_t</font> cmd</i>)</code>
 <p>Executes once per tic for the local client before their button inputs are sent to the server (or executed in singleplayer), and as such, <font color=red><i><b>this hook is only executed locally</b></i></font>.
-<p><code>player</code> is the local player, and <code>cmd</code> is a <code><a href=Userdata_structures.html#ticcmd_t class=mw-redirect title="Userdata structures">ticcmd_t</a></code> userdata representing the button information performed locally this tic.
+<p><code>player</code> is the local player, and <code>cmd</code> is a <code><a href=Lua_Userdata_structures.html#ticcmd_t class=mw-redirect title="Userdata structures">ticcmd_t</a></code> userdata representing the button information performed locally this tic.
 </p>
 <h3><span class=mw-headline id=Other>Other</span></h3>
 <h4><span class=mw-headline id=HUD>HUD</span></h4>
