@@ -1238,7 +1238,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>"game"</code>
 </th>
-<td><code>function(<i><a href=#Patch/string_drawing_functions>drawer</a></i> v, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> stplyr, [<i><a href=Camera_t.html class=mw-redirect title="Camera t">camera_t</a></i> cam]])</code>
+<td><code>function(<i><a href=#Patch/string_drawing_functions>drawer</a></i> v, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> stplyr, [<i><a href=Lua_Userdata_structures.html#camera_t class=mw-redirect title="Camera t">camera_t</a></i> cam]])</code>
 </td>
 <td>The function is run when the <a href=Game_HUD.html class=mw-redirect title="Game HUD">Game HUD</a> is displayed. <i>(Default value)</i>
 <p>Notes:
@@ -1263,7 +1263,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>"titlecard"</code>
 </th>
-<td><code>function(<i><a href=#Patch/string_drawing_functions>drawer</a></i> v, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> stplyr, [<i>int</i> ticker, [<i>int</i> endtime]]])</code>
+<td><code>function(<i><a href=#Patch/string_drawing_functions>drawer</a></i> v, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> stplyr, [<i>int</i> ticker, [<i>int</i> endtime]]])</code>
 </td>
 <td>The function is run when the stage's level title card is displayed.
 <p>Notes:
@@ -1281,7 +1281,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><b><code>"continue"</code></b>
 </th>
-<td><code>function(<a href=#Patch/string_drawing_functions><i>drawer</i></a> v, <a href=Player_t.html class=mw-redirect title="Player t"><i>player_t</i></a> stplyr, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> scale, <i>string</i> skin, <i>int</i> sprite2, <i>int</i> frame, <i>int</i> rotation, <i>int</i> color, <i>int</i> ticker, <i>boolean</i> continuing)</code>
+<td><code>function(<a href=#Patch/string_drawing_functions><i>drawer</i></a> v, <a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t"><i>player_t</i></a> stplyr, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> scale, <i>string</i> skin, <i>int</i> sprite2, <i>int</i> frame, <i>int</i> rotation, <i>int</i> color, <i>int</i> ticker, <i>boolean</i> continuing)</code>
 </td>
 <td>The function is run for each player displayed on the Continue screen. If the function returns <code>true</code>, the default player sprite is not drawn; otherwise, it will be drawn after executing the function.
 <p>During the countdown, the boolean <code>continuing</code> is false and <code>ticker</code> is the number of tics left before the option to continue the game expires; if the player confirms to continue, <code>continuing</code> becomes true and <code>ticker</code> is the number of tics since the player confirmed.&nbsp; &nbsp;
@@ -1290,7 +1290,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><b><code>"playersetup"</code></b>
 </th>
-<td><code>function(<a href=#Patch/string_drawing_functions><i>drawer</i></a> v, <a href=Player_t.html class=mw-redirect title="Player t"><i>player_t</i></a> stplyr, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> scale, <i>string</i> skin, <i>int</i> sprite2, <i>int</i> frame, <i>int</i> rotation, <i>int</i> color, <i>int</i> ticker, <i>boolean</i> paused)</code>
+<td><code>function(<a href=#Patch/string_drawing_functions><i>drawer</i></a> v, <a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t"><i>player_t</i></a> stplyr, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> scale, <i>string</i> skin, <i>int</i> sprite2, <i>int</i> frame, <i>int</i> rotation, <i>int</i> color, <i>int</i> ticker, <i>boolean</i> paused)</code>
 </td>
 <td>The function is run when a player is displayed on the Player Setup menu. If the function returns <code>true</code>, the default player sprite is not drawn; otherwise, it will be drawn after executing the function.
 <p><code>ticker</code> is the number of tics remaining before the default player walk animation's frame updates, and the boolean <code>paused</code> is true if the player has pressed the Pause|Break key to pause the default player walk animation.
@@ -1317,12 +1317,12 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <td><span id=v.cachePatch></span><code><b>v.cachePatch</b>(<i>string</i> name)</code>
 </td>
-<td><code><a href=Patch_t.html class=mw-redirect title="Patch t">patch_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#patch_t class=mw-redirect title="Patch t">patch_t</a></code>
 </td>
 <td>Caches a new patch using a graphic with <code>name</code> as the name. Returns nil if the graphic does not exist.
 </tr>
 <tr>
-<td><span id=v.draw></span><code><b>v.draw</b>(<i>int</i> x, <i>int</i> y, <i><a href=Patch_t.html class=mw-redirect title="Patch t">patch_t</a></i> patch, [<i>int</i> flags, [<i>colormap</i> c]])</code>
+<td><span id=v.draw></span><code><b>v.draw</b>(<i>int</i> x, <i>int</i> y, <i><a href=Lua_Userdata_structures.html#patch_t class=mw-redirect title="Patch t">patch_t</a></i> patch, [<i>int</i> flags, [<i>colormap</i> c]])</code>
 </td>
 <td>nil
 </td>
@@ -1335,14 +1335,14 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <td><span id=v.getSpritePatch></span><code><b>v.getSpritePatch</b>(<i>string/int</i> sprite, [<i>int</i> frame, [<i>int</i> rotation, [<i>angle_t</i> rollangle]]])</code>
 </td>
-<td><code><a href=Patch_t.html class=mw-redirect title="Patch t">patch_t</a></code>, boolean
+<td><code><a href=Lua_Userdata_structures.html#patch_t class=mw-redirect title="Patch t">patch_t</a></code>, boolean
 </td>
 <td>Returns a patch corresponding to the arguments given, and a boolean specifying whether the patch should be flipped. <code>sprite</code> may be a sprite number (<code>SPR_POSS</code>) or sprite prefix (<code>"POSS"</code>). <code>rotation</code> is a number between 1 and 8 (1 to 16 for 16 angle sprites). <code>0</code> is equivalent to <code>1</code> for <code>rotation</code> as well. <code>rollangle</code> is an angle to rotate the patch <i>counter clockwise</i>.
 </tr>
 <tr>
 <td><span id=v.getSprite2Patch></span><code><b>v.getSprite2Patch</b>(<i>string/int</i> skin, <i>string/int</i> sprite2, [<i>boolean</i> super?,] [<i>int</i> frame, [<i>int</i> rotation, [<i>angle_t</i> rollangle]]])</code>
 </td>
-<td><code><a href=Patch_t.html class=mw-redirect title="Patch t">patch_t</a></code>, boolean
+<td><code><a href=Lua_Userdata_structures.html#patch_t class=mw-redirect title="Patch t">patch_t</a></code>, boolean
 </td>
 <td>Returns a patch corresponding to the arguments given, and a boolean specifying whether the patch should be flipped. For a description of some of these parameters, see <code><a href=#v.getSpritePatch>v.getSpritePatch</a></code>.
 <p>Notes:
@@ -1351,7 +1351,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <li><code>super?</code> determines whether to get the super form sprites. This overrides the FF_SPR2SUPER flag from <i>sprite2</i> if it was also set there</ul>
 </tr>
 <tr>
-<td><span id=v.drawScaled></span><code><b>v.drawScaled</b>(<i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> scale, <i><a href=Patch_t.html class=mw-redirect title="Patch t">patch_t</a></i> patch, [<i>int</i> flags, [<i>colormap</i> c]])</code>
+<td><span id=v.drawScaled></span><code><b>v.drawScaled</b>(<i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> scale, <i><a href=Lua_Userdata_structures.html#patch_t class=mw-redirect title="Patch t">patch_t</a></i> patch, [<i>int</i> flags, [<i>colormap</i> c]])</code>
 </td>
 <td>nil
 </td>
@@ -1363,7 +1363,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <li><code>c</code> determines the colormap applied to the patch – use <code><a href=#v.getColormap>v.getColormap</a></code> or <code><a href=#v.getStringColormap>v.getStringColormap</a></code> to obtain a value that can be used here.</ul>
 </tr>
 <tr>
-<td><span id=v.drawStretched></span><code><b>v.drawStretched</b>(<i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> hscale, <i>fixed_t</i> vscale, <i><a href=Patch_t.html class=mw-redirect title="Patch t">patch_t</a></i> patch, [<i>int</i> flags, [<i>colormap</i> c]])</code>
+<td><span id=v.drawStretched></span><code><b>v.drawStretched</b>(<i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> hscale, <i>fixed_t</i> vscale, <i><a href=Lua_Userdata_structures.html#patch_t class=mw-redirect title="Patch t">patch_t</a></i> patch, [<i>int</i> flags, [<i>colormap</i> c]])</code>
 </td>
 <td>nil
 </td>
@@ -1375,7 +1375,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <li><code>c</code> determines the colormap applied to the patch – use <code><a href=#v.getColormap>v.getColormap</a></code> or <code><a href=#v.getStringColormap>v.getStringColormap</a></code> to obtain a value that can be used here.</ul>
 </tr>
 <tr>
-<td><span id=v.drawCropped></span><code><b>v.drawCropped</b>(<i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> hscale, <i>fixed_t</i> vscale, <i><a href=Patch_t.html class=mw-redirect title="Patch t">patch_t</a></i> patch, <i>int</i> flags, <i>colormap</i> c, <i>fixed_t</i> sx, <i>fixed_t</i> sy, <i>fixed_t</i> w, <i>fixed_t</i> h)</code>
+<td><span id=v.drawCropped></span><code><b>v.drawCropped</b>(<i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> hscale, <i>fixed_t</i> vscale, <i><a href=Lua_Userdata_structures.html#patch_t class=mw-redirect title="Patch t">patch_t</a></i> patch, <i>int</i> flags, <i>colormap</i> c, <i>fixed_t</i> sx, <i>fixed_t</i> sy, <i>fixed_t</i> w, <i>fixed_t</i> h)</code>
 </td>
 <td>nil
 </td>
@@ -1564,7 +1564,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 </p>
 </tr>
 <tr>
-<td><span id=v.getStringColormap></span><code><b>v.getSectorColormap</b>([<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector], <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z, <i>int</i> lightlevel)</code>
+<td><span id=v.getStringColormap></span><code><b>v.getSectorColormap</b>([<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector], <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z, <i>int</i> lightlevel)</code>
 </td>
 <td>colormap
 </td>
@@ -1896,7 +1896,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 </td>
 <td>nil
 </td>
-<td>Format of <code>fn</code>: <code><i>function</i>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>string</i> arg, [...]])</code>
+<td>Format of <code>fn</code>: <code><i>function</i>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>string</i> arg, [...]])</code>
 <p>Registers a console command with the name <code>name</code> that executes the specified function when called. The first argument of the function is the player who executed the command, and all subsequent arguments are arguments passed to the command.
 <p><code>flags</code> may be any of the flags listed below, OR'ed together, or none.
 </p>
@@ -1923,14 +1923,14 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 </table>
 </tr>
 <tr>
-<td><span id=COM_BufAddText></span><code><b>COM_BufAddText</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>string</i> text)</code>
+<td><span id=COM_BufAddText></span><code><b>COM_BufAddText</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>string</i> text)</code>
 </td>
 <td>nil
 </td>
 <td>Adds the specified text to <code>player</code>'s console buffer, but does not actually execute the command.
 </tr>
 <tr>
-<td><span id=COM_BufInsertText></span><code><b>COM_BufInsertText</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>string</i> text)</code>
+<td><span id=COM_BufInsertText></span><code><b>COM_BufInsertText</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>string</i> text)</code>
 </td>
 <td>nil
 </td>
@@ -1939,7 +1939,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <td><span id=CV_RegisterVar></span><code><b>CV_RegisterVar</b>(<i>table</i> t)</code>
 </td>
-<td><code><a href=Consvar_t.html class=mw-redirect title="Consvar t">consvar_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#consvar_t class=mw-redirect title="Consvar t">consvar_t</a></code>
 </td>
 <td>Format of <code>t</code>: <code><i>table</i>{<i>string</i> name, <i>string</i> defaultvalue, <i>int</i> flags, <i>table</i> PossibleValue, <i>function</i>(<i>consvar_t</i> var) func}</code>
 <p>Registers a console variable with the name <code>name</code> for use in the console and returns the console variable created. <code>defaultvalue</code> is the default value for the console variable in string form. <code>PossibleValue</code> is a list or range of possible values that are allowed for the variable. <code>flags</code> is an integer storing the flags to be given to the console variable; see <a href=Constants.html#Console_variable_flags title=Constants>Constants &gt; Console variable flags</a> for a list of them. If the <code>CV_CALL</code> flag is set, the function <code>func</code> is executed when the variable is changed: the sole argument passed to such function is the console variable itself.
@@ -2005,12 +2005,12 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <td><span id=CV_FindVar></span><code><b>CV_FindVar</b>(<i>string</i> var)</code>
 </td>
-<td><code><a href=Consvar_t.html class=mw-redirect title="Consvar t">consvar_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#consvar_t class=mw-redirect title="Consvar t">consvar_t</a></code>
 </td>
 <td>Returns the corresponding console variable named <code>var</code>.
 </tr>
 <tr>
-<td><span id=CV_Set></span><code><b>CV_Set</b>(<i><a href=Consvar_t.html class=mw-redirect title="Consvar t">consvar_t</a></i> cvar, <i>string/int</i> value)</code>
+<td><span id=CV_Set></span><code><b>CV_Set</b>(<i><a href=Lua_Userdata_structures.html#consvar_t class=mw-redirect title="Consvar t">consvar_t</a></i> cvar, <i>string/int</i> value)</code>
 </td>
 <td>nil
 </td>
@@ -2019,14 +2019,14 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 </p>
 </tr>
 <tr>
-<td><span id=CV_StealthSet></span><code><b>CV_StealthSet</b>(<i><a href=Consvar_t.html class=mw-redirect title="Consvar t">consvar_t</a></i> cvar, <i>string/int</i> value)</code>
+<td><span id=CV_StealthSet></span><code><b>CV_StealthSet</b>(<i><a href=Lua_Userdata_structures.html#consvar_t class=mw-redirect title="Consvar t">consvar_t</a></i> cvar, <i>string/int</i> value)</code>
 </td>
 <td>nil
 </td>
 <td>Sets the value of the target console variable <code>cvar</code> to <code>value</code> without calling its callback function.
 </tr>
 <tr>
-<td><span id=CV_AddValue></span><code><b>CV_AddValue</b>(<i><a href=Consvar_t.html class=mw-redirect title="Consvar t">consvar_t</a></i> cvar, <i>int</i> increment)</code>
+<td><span id=CV_AddValue></span><code><b>CV_AddValue</b>(<i><a href=Lua_Userdata_structures.html#consvar_t class=mw-redirect title="Consvar t">consvar_t</a></i> cvar, <i>int</i> increment)</code>
 </td>
 <td>nil
 </td>
@@ -2038,7 +2038,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <li><code>forceskin</code>: Cycles through usable skins. Follows the same conditions as <code>R_SkinUsable</code> for the resulting value.</ul>
 </tr>
 <tr>
-<td><span id=CONS_Printf></span><code><b>CONS_Printf</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>string</i> text)</code>
+<td><span id=CONS_Printf></span><code><b>CONS_Printf</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>string</i> text)</code>
 </td>
 <td>nil
 </td>
@@ -2058,19 +2058,19 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <th>Description
 </tr>
 <tr>
-<td><span id=searchBlockmap></span><code><b>searchBlockmap</b>(<i>string</i> searchtype, <i>function</i> fn, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> refmobj, [<i>fixed_t</i> x1, <i>fixed_t</i> x2, <i>fixed_t</i> y1, <i>fixed_t</i> y2])</code>
+<td><span id=searchBlockmap></span><code><b>searchBlockmap</b>(<i>string</i> searchtype, <i>function</i> fn, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> refmobj, [<i>fixed_t</i> x1, <i>fixed_t</i> x2, <i>fixed_t</i> y1, <i>fixed_t</i> y2])</code>
 </td>
 <td>boolean
 </td>
 <td>Does a search through a specified area of the <a href=Blockmap.html title=Blockmap>blockmap</a>. This can be used to find Objects or linedefs in the area and run a function for each them. This function returns <code>true</code> if the search was not interrupted at any point, and <code>false</code> if it was.
 <p><code>searchtype</code> determines what is being searched for:
 </p>
-<ul><li><code>"objects"</code> – search for <a href=Object.html title=Object>Objects</a> (<code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>) in the blockmap. Note that Objects with <code>MF_NOBLOCKMAP</code> are not in the blockmap, and so will not be found by this function.</li>
-<li><code>"lines"</code> – search for <a href=Linedef.html title=Linedef>linedefs</a> (<code><a href=Line_t.html class=mw-redirect title="Line t">line_t</a></code>) in the blockmap.</ul>
+<ul><li><code>"objects"</code> – search for <a href=Object.html title=Object>Objects</a> (<code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>) in the blockmap. Note that Objects with <code>MF_NOBLOCKMAP</code> are not in the blockmap, and so will not be found by this function.</li>
+<li><code>"lines"</code> – search for <a href=Linedef.html title=Linedef>linedefs</a> (<code><a href=Lua_Userdata_structures.html#line_t class=mw-redirect title="Line t">line_t</a></code>) in the blockmap.</ul>
 <p><code>fn</code> is the function to be used on each found Object/linedef. The format of the function depends on the <code>searchtype</code>:
 </p>
-<ul><li><code>"objects"</code> search – <code><i>function</i>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> refmobj, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> foundmobj)</code></li>
-<li><code>"lines"</code> search – <code><i>function</i>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> refmobj, <i><a href=Line_t.html class=mw-redirect title="Line t">line_t</a></i> foundline)</code></ul>
+<ul><li><code>"objects"</code> search – <code><i>function</i>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> refmobj, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> foundmobj)</code></li>
+<li><code>"lines"</code> search – <code><i>function</i>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> refmobj, <i><a href=Lua_Userdata_structures.html#line_t class=mw-redirect title="Line t">line_t</a></i> foundline)</code></ul>
 <p>In both cases, <code>refmobj</code> is the same Object given in <code>searchBlockmap</code> arguments, while <code>foundmobj</code>/<code>foundline</code> are an Object/linedef found in the blockmap.
 <p>The return value of <code>fn</code> affects how searching continues afterwards:
 </p>
@@ -2317,7 +2317,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 </p>
 </tr>
 <tr>
-<td><span id=print></span><code><b>chatprintf</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>string</i> output, [<i>boolean</i> sound])</code>
+<td><span id=print></span><code><b>chatprintf</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>string</i> output, [<i>boolean</i> sound])</code>
 </td>
 <td>nil
 </td>
@@ -2343,14 +2343,14 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <td>Binds a function to a hook (i.e., the function will be run when a particular event happens). <i>See <a href=Lua_Hooks.html title=Lua/Hooks>Lua/Hooks</a> for more information on using this function.</i>
 </tr>
 <tr>
-<td><span id=super></span><code><b>super</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor, <i>int</i> var1, <i>int</i> var2)</code>
+<td><span id=super></span><code><b>super</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor, <i>int</i> var1, <i>int</i> var2)</code>
 </td>
 <td>nil
 </td>
 <td><b>Only use this inside of an overridden <code>A_</code> <a href=Actions.html title=Actions>action</a>.</b> Calls the original version of the action.
 </tr>
 <tr>
-<td><span id=IsPlayerAdmin></span><code><b>IsPlayerAdmin</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=IsPlayerAdmin></span><code><b>IsPlayerAdmin</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>boolean
 </td>
@@ -2873,42 +2873,42 @@ Calling the function with no arguments will clear the custom settings.
 <th>Description
 </tr>
 <tr>
-<td><span id=P_CheckMeleeRange></span><code><b>P_CheckMeleeRange</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
+<td><span id=P_CheckMeleeRange></span><code><b>P_CheckMeleeRange</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns true if <code>actor</code>'s target is within the actor's melee range, false if not.
 </tr>
 <tr>
-<td><span id=P_JetbCheckMeleeRange></span><code><b>P_JetbCheckMeleeRange</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
+<td><span id=P_JetbCheckMeleeRange></span><code><b>P_JetbCheckMeleeRange</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
 </td>
 <td>boolean
 </td>
 <td>Same as <code>P_CheckMeleeRange</code>, except the melee range is adjusted for use with the <a href=Jetty.html-Syn_Bomber.html title="Jetty-Syn Bomber">Jetty-Syn Bomber</a>.
 </tr>
 <tr>
-<td><span id=P_FaceStabCheckMeleeRange></span><code><b>P_FaceStabCheckMeleeRange</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
+<td><span id=P_FaceStabCheckMeleeRange></span><code><b>P_FaceStabCheckMeleeRange</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
 </td>
 <td>boolean
 </td>
 <td>Same as <code>P_CheckMeleeRange</code>, except the melee range is adjusted for use with the <a href=CastleBot_FaceStabber.html class=mw-redirect title="CastleBot FaceStabber">CastleBot FaceStabber</a>.
 </tr>
 <tr>
-<td><span id=P_SkimCheckMeleeRange></span><code><b>P_SkimCheckMeleeRange</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
+<td><span id=P_SkimCheckMeleeRange></span><code><b>P_SkimCheckMeleeRange</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
 </td>
 <td>boolean
 </td>
 <td>Same as <code>P_CheckMeleeRange</code>, except the melee range is adjusted for use with the <a href=Skim.html title=Skim>Skim</a>.
 </tr>
 <tr>
-<td><span id=P_CheckMissileRange></span><code><b>P_CheckMissileRange</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
+<td><span id=P_CheckMissileRange></span><code><b>P_CheckMissileRange</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns true if <code>actor</code> is able to shoot its target at the moment. Returns false if <code>actor.reactiontime</code> has not reached 0 or <code>actor</code> cannot see the target. Otherwise, the result is randomly decided based on the distance between them.
 </tr>
 <tr>
-<td><span id=P_NewChaseDir></span><code><b>P_NewChaseDir</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
+<td><span id=P_NewChaseDir></span><code><b>P_NewChaseDir</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
 </td>
 <td>nil
 </td>
@@ -2917,7 +2917,7 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=P_LookForPlayers></span><code><b>P_LookForPlayers</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor, [<i>fixed_t</i> dist, [<i>boolean</i> allaround?, [<i>boolean</i> tracer?]]])</code>
+<td><span id=P_LookForPlayers></span><code><b>P_LookForPlayers</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor, [<i>fixed_t</i> dist, [<i>boolean</i> allaround?, [<i>boolean</i> tracer?]]])</code>
 </td>
 <td>boolean
 </td>
@@ -2938,14 +2938,14 @@ Calling the function with no arguments will clear the custom settings.
 <th>Description
 </tr>
 <tr>
-<td><span id=P_RemoveShield></span><code><b>P_RemoveShield</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_RemoveShield></span><code><b>P_RemoveShield</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Removes any <a href=Shield.html class=mw-redirect title=Shield>shield</a> <code>player</code> may be carrying. This will not throw back the player nor play a sound.
 </tr>
 <tr>
-<td><span id=P_DamageMobj></span><code><b>P_DamageMobj</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> target, [<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor, [<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i>int</i> damage, [<i>int</i> damagetype]]]])</code>
+<td><span id=P_DamageMobj></span><code><b>P_DamageMobj</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> target, [<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor, [<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i>int</i> damage, [<i>int</i> damagetype]]]])</code>
 </td>
 <td>boolean
 </td>
@@ -2957,7 +2957,7 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=P_KillMobj></span><code><b>P_KillMobj</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> target, [<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor, [<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i>int</i> damagetype]]])</code>
+<td><span id=P_KillMobj></span><code><b>P_KillMobj</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> target, [<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor, [<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i>int</i> damagetype]]])</code>
 </td>
 <td>nil
 </td>
@@ -2968,7 +2968,7 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=P_PlayerRingBurst></span><code><b>P_PlayerRingBurst</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>int</i> numrings])</code>
+<td><span id=P_PlayerRingBurst></span><code><b>P_PlayerRingBurst</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>int</i> numrings])</code>
 </td>
 <td>nil
 </td>
@@ -2978,84 +2978,84 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=P_PlayerWeaponPanelBurst></span><code><b>P_PlayerWeaponPanelBurst</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_PlayerWeaponPanelBurst></span><code><b>P_PlayerWeaponPanelBurst</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Spills all weapon panels that <code>player</code> is carrying, but does not throw back <code>player</code>. Unlike the rings in <code>P_PlayerRingBurst</code>, the player will actually <i>lose</i> the weapon panels spilled by this function.
 </tr>
 <tr>
-<td><span id=P_PlayerWeaponAmmoBurst></span><code><b>P_PlayerWeaponAmmoBurst</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_PlayerWeaponAmmoBurst></span><code><b>P_PlayerWeaponAmmoBurst</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Spills all weapon panels and ammo that <code>player</code> is carrying, but does not throw back <code>player</code>. Unlike the rings in <code>P_PlayerRingBurst</code>, the player will actually <i>lose</i> the weapon ammo spilled by this function.
 </tr>
 <tr>
-<td><span id=P_PlayerWeaponPanelOrAmmoBurst></span><code><b>P_PlayerWeaponPanelOrAmmoBurst</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_PlayerWeaponPanelOrAmmoBurst></span><code><b>P_PlayerWeaponPanelOrAmmoBurst</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Spills weapon panels/ammo depending of what <code>player</code> is carrying, but does not throw back <code>player</code>. If <code>player</code> doesn't have a weapon but it's ammo, then the ammo is spilled instead. Otherwise, if <code>player</code> does have the weapon then the weapon is spilled. Unlike the rings in <code>P_PlayerRingBurst</code>, the player will actually <i>lose</i> the weapon panels/ammo spilled by this function.
 </tr>
 <tr>
-<td><span id=P_PlayerEmeraldBurst></span><code><b>P_PlayerEmeraldBurst</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> toss?])</code>
+<td><span id=P_PlayerEmeraldBurst></span><code><b>P_PlayerEmeraldBurst</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> toss?])</code>
 </td>
 <td>nil
 </td>
 <td>Spills all emeralds that <code>player</code> is carrying, but does not throw back <code>player</code>. If <code>toss</code> is true, all the emeralds are thrown in the player's forward direction and a toss delay of 2 seconds is set (for players tossing emeralds). Otherwise, the emeralds are spilled around the player (for players dropping emeralds after being hurt). Unlike the rings in <code>P_PlayerRingBurst</code>, the player will actually <i>lose</i> the emeralds spilled by this function.
 </tr>
 <tr>
-<td><span id=P_PlayerFlagBurst></span><code><b>P_PlayerFlagBurst</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> toss?])</code>
+<td><span id=P_PlayerFlagBurst></span><code><b>P_PlayerFlagBurst</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> toss?])</code>
 </td>
 <td>nil
 </td>
 <td>Spills any CTF flags that <code>player</code> is carrying, but does not throw back <code>player</code>. If <code>toss</code> is true, the flag is thrown in the player's forward direction and a toss delay of 2 seconds is set (for players tossing a flag). Otherwise, the direction is random (for players dropping a flag after being hurt).
 </tr>
 <tr>
-<td><span id=P_PlayRingLossSound></span><code><b>P_PlayRinglossSound</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=P_PlayRingLossSound></span><code><b>P_PlayRinglossSound</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>nil
 </td>
 <td>Plays one of the 4 player ring spill sounds randomly, which can vary depending on the skin, or plays the Mario ring loss sound if in <a href=Mario_mode.html title="Mario mode">Mario mode</a>. <code>source</code> is the Object the sound came from.
 </tr>
 <tr>
-<td><span id=P_PlayDeathSound></span><code><b>P_PlayDeathSound</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=P_PlayDeathSound></span><code><b>P_PlayDeathSound</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>nil
 </td>
 <td>Plays one of the 4 player death sounds randomly, which can vary depending on the skin. <code>source</code> is the Object the sound came from.
 </tr>
 <tr>
-<td><span id=P_PlayVictorySound></span><code><b>P_PlayVictorySound</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=P_PlayVictorySound></span><code><b>P_PlayVictorySound</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>nil
 </td>
 <td>Plays one of the 4 player victory taunt sounds randomly, which can vary depending on the skin. <code>source</code> is the Object the sound came from.
 </tr>
 <tr>
-<td><span id=P_PlayLivesJingle></span><code><b>P_PlayLivesJingle</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_PlayLivesJingle></span><code><b>P_PlayLivesJingle</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Plays the extra life jingle. By default this is the extra life music, but in <a href=Mario_mode.html title="Mario mode">Mario mode</a> maps or if <code>Use1upSound</code> is enabled in the <code><a href=MainCfg.html title=MainCfg>MainCfg</a></code> block, this is instead a sound effect. If the music is used, the player's <code>pw_extralife</code> timer is set to <code>ExtraLifeTics + 1</code>.
 </tr>
 <tr>
-<td><span id=P_CanPickupItem></span><code><b>P_CanPickupItem</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> weapon?])</code>
+<td><span id=P_CanPickupItem></span><code><b>P_CanPickupItem</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> weapon?])</code>
 </td>
 <td>boolean
 </td>
 <td>Returns true if <code>player</code> can pick up the item, returns false if <code>player</code> is a <a href=Bot.html title=Bot>bot</a> or is flashing after being hurt.
 </tr>
 <tr>
-<td><span id=P_DoNightsScore></span><code><b>P_DoNightsScore</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_DoNightsScore></span><code><b>P_DoNightsScore</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Awards score to <code>player</code> NiGHTS-style; spawns a floating score item which changes appearance depending on the player's current link count and whether the player is in bonus time.
 </tr>
 <tr>
-<td><span id=P_DoMatchSuper></span><code><b>P_DoMatchSuper</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_DoMatchSuper></span><code><b>P_DoMatchSuper</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
@@ -3071,9 +3071,9 @@ Calling the function with no arguments will clear the custom settings.
 <th>Description
 </tr>
 <tr>
-<td><span id=P_CheckPosition></span><code><b>P_CheckPosition</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> x, <i>fixed_t</i> y)</code>
+<td><span id=P_CheckPosition></span><code><b>P_CheckPosition</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> x, <i>fixed_t</i> y)</code>
 </td>
-<td>boolean, <code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td>boolean, <code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Checks if the position <code>(x, y)</code> is valid for the Object <code>mobj</code>. Note that this does not actually teleport the Object to the given coordinates; it only tests what would happen if it was at that position.
 <p>This function returns false if either a) the Object has been blocked by a wall or another Object, or b) the Object has been removed from the map during checking; otherwise it will return true to signal the position is not blocked. This function additionally returns the "tmthing" Object set during the run of the function, which in the majority of cases will be <code>mobj</code> itself.
@@ -3081,9 +3081,9 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=P_TryMove></span><code><b>P_TryMove</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj,<i>fixed_t</i> x, <i>fixed_t</i> y, [<i>boolean</i> allowdropoff?])</code>
+<td><span id=P_TryMove></span><code><b>P_TryMove</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj,<i>fixed_t</i> x, <i>fixed_t</i> y, [<i>boolean</i> allowdropoff?])</code>
 </td>
-<td>boolean, <code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td>boolean, <code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Tries to move the Object <code>mobj</code> to the X/Y coordinates supplied (all done in the same tic), checking each position to make sure the Object is not blocked on the way there. If it is blocked by a wall or another Object, or the height of the sector is too small to fit in, this will return false and leave the Object where it was to begin with (i.e., the move failed); otherwise this will return true with the Object at the coordinates supplied. This function additionally returns the "tmthing" Object set during the run of the function, which in the majority of cases will be <code>mobj</code> itself.
 <p><code>allowdropoff</code> determines whether to stop the Object from falling off a platform too low to step-down when moving, or let it continue regardless of this – if <code>allowdropoff</code> is false and the Object would be falling off a platform if it continued, this will return false.
@@ -3091,16 +3091,16 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=P_Move></span><code><b>P_Move</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor, <i>int</i> speed)</code>
+<td><span id=P_Move></span><code><b>P_Move</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor, <i>int</i> speed)</code>
 </td>
-<td>boolean, <code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td>boolean, <code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Moves the <code>actor</code> Object in its current direction (using <code><i>actor</i>.movedir</code> rather than the angle), moving forward a distance of <code><i>speed</i>*FRACUNIT</code> (<code>speed</code> does not need to be multiplied by <code>FRACUNIT</code>). Returns true when the actor has moved; returns false if the actor cannot move, does not have a direction to move in or is dead. This function additionally returns the "tmthing" Object set during the run of the function, which in the majority of cases will be <code>actor</code> itself.
 </tr>
 <tr>
-<td><span id=P_TeleportMove></span><code><b>P_TeleportMove</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
+<td><span id=P_TeleportMove></span><code><b>P_TeleportMove</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
 </td>
-<td>boolean, <code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td>boolean, <code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Teleports the Object straight to the <code>x</code>, <code>y</code>, and <code>z</code> coordinates supplied, but does not account for whether the Object will be stuck in this position, and will always return true. This function additionally returns the "tmthing" Object set during the run of the function, which in the majority of cases will be <code>mobj</code> itself.
 <table cellpadding=2 style="width:auto;margin:1em auto;border:4px #BF6363 solid;background:#EFAFAF;padding:5px">
@@ -3111,49 +3111,49 @@ Calling the function with no arguments will clear the custom settings.
 </table>
 </tr>
 <tr>
-<td><span id=P_SetOrigin></span><code><b>P_SetOrigin</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
+<td><span id=P_SetOrigin></span><code><b>P_SetOrigin</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
 </td>
-<td>boolean, <code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td>boolean, <code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Teleports the Object to the <code>x</code>, <code>y</code>, and <code>z</code> coordinates supplied without any positional checks. As all interpolation values of the Object are <b>reset</b>, this function should be used for instant movement. It will always return true, plus the "tmthing" Object set during the run of the function, which in the majority of cases will be <code>mobj</code> itself.
 </tr>
 <tr>
-<td><span id=P_MoveOrigin></span><code><b>P_MoveOrigin</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
+<td><span id=P_MoveOrigin></span><code><b>P_MoveOrigin</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
 </td>
-<td>boolean, <code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td>boolean, <code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Teleports the Object to the <code>x</code>, <code>y</code>, and <code>z</code> coordinates supplied without any positional checks. As all interpolation values of the Object are <b>kept</b>, this function should be used for continuous movement. This function additionally returns the "tmthing" Object set during the run of the function, which in the majority of cases will be <code>mobj</code> itself.
 </tr>
 <tr>
-<td><span id=P_SlideMove></span><code><b>P_SlideMove</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mo)</code>
+<td><span id=P_SlideMove></span><code><b>P_SlideMove</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mo)</code>
 </td>
 <td>nil
 </td>
 <td>Slides <code>mo</code> along a wall using its current X/Y momentum. This assumes that <code>mo</code> has already been blocked by a wall, so this searches for the wall that blocked it before sliding.
 </tr>
 <tr>
-<td><span id=P_BounceMove></span><code><b>P_BounceMove</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mo)</code>
+<td><span id=P_BounceMove></span><code><b>P_BounceMove</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mo)</code>
 </td>
 <td>nil
 </td>
 <td>Bounces <code>mo</code> off a wall using its current X/Y momentum. This assumes that <code>mo</code> has already been blocked by a wall, so this searches for the wall that blocked it before bouncing.
 </tr>
 <tr>
-<td><span id=P_CheckSight></span><code><b>P_CheckSight</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> target)</code>
+<td><span id=P_CheckSight></span><code><b>P_CheckSight</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> target)</code>
 </td>
 <td>boolean
 </td>
 <td>Checks if <code>target</code> is visible from <code>source</code>'s position – if it is, this returns true; otherwise it returns false. This function is also able to check if FOFs are blocking the line of sight. Note that the angles the Objects are facing are not taken into consideration, only their map coordinates and heights.
 </tr>
 <tr>
-<td><span id=P_CheckHoopPosition></span><code><b>P_CheckHoopPosition</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> hoop, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z, <i>fixed_t</i> radius)</code>
+<td><span id=P_CheckHoopPosition></span><code><b>P_CheckHoopPosition</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> hoop, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z, <i>fixed_t</i> radius)</code>
 </td>
 <td>nil
 </td>
 <td>Optimized version of <code><a href=#P_CheckPosition>P_CheckPosition</a></code> specifically designed for <code>MT_HOOPCOLLIDE</code>. <code>radius</code> is unused.
 </tr>
 <tr>
-<td><span id=P_RadiusAttack></span><code><b>P_RadiusAttack</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>fixed_t</i> radius, [<i>int</i> damagetype, [<i>boolean</i> sightcheck]])</code>
+<td><span id=P_RadiusAttack></span><code><b>P_RadiusAttack</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>fixed_t</i> radius, [<i>int</i> damagetype, [<i>boolean</i> sightcheck]])</code>
 </td>
 <td>nil
 </td>
@@ -3176,35 +3176,35 @@ Calling the function with no arguments will clear the custom settings.
 <td>Returns what would be the ceilingz (the absolute Z position of the ceiling) at the <code>x</code>, <code>y</code>, and <code>z</code> coordinates supplied. <code>height</code> should be the height of the Object you want to check this for (needed for checking solid/quicksand FOFs). Keep in mind the coordinates and perhaps even the height do not necessarily have to be the actual position of an existing Object.
 </tr>
 <tr>
-<td><span id=P_DoSpring></span><code><b>P_DoSpring</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> spring, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> object)</code>
+<td><span id=P_DoSpring></span><code><b>P_DoSpring</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> spring, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> object)</code>
 </td>
 <td>nil
 </td>
 <td>The <code>spring</code> Object sends <code>object</code> into the air like a spring. <code>spring</code> does not necessarily have to be an Object with the <code>MF_SPRING</code> flag, but it should have least all the same attributes as one; see the <a href=Spring.html title=Spring>Spring</a> article for more details. Note that <code>object</code> will also be given the <code>MFE_SPRUNG</code> flag, marking it as having already touched a spring this tic; the flag will automatically be removed the next tic. If this function is called while <code>object</code> has this flag set, it will have no effect.
 </tr>
 <tr>
-<td><span id=P_TryCameraMove></span><code><b>P_TryCameraMove</b>(<i><a href=Camera_t.html class=mw-redirect title="Camera t">camera_t</a></i> camera, <i>fixed_t</i> x, <i>fixed_t</i> y)</code>
+<td><span id=P_TryCameraMove></span><code><b>P_TryCameraMove</b>(<i><a href=Lua_Userdata_structures.html#camera_t class=mw-redirect title="Camera t">camera_t</a></i> camera, <i>fixed_t</i> x, <i>fixed_t</i> y)</code>
 </td>
 <td>boolean
 </td>
 <td>Tries to move the Camera <code>camera</code> to the X/Y coordinates supplied (all done in the same tic), checking each position to make sure the Camera is not blocked on the way there. If it is blocked by a wall, or the height of the sector is too small to fit in, this will return false and leave the Camera where it was to begin with (i.e., the move failed); otherwise this will return true with the Camera at the coordinates supplied.
 </tr>
 <tr>
-<td><span id=P_TeleportCameraMove></span><code><b>P_TeleportCameraMove</b>(<i><a href=Camera_t.html class=mw-redirect title="Camera t">camera_t</a></i> camera, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
+<td><span id=P_TeleportCameraMove></span><code><b>P_TeleportCameraMove</b>(<i><a href=Lua_Userdata_structures.html#camera_t class=mw-redirect title="Camera t">camera_t</a></i> camera, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
 </td>
 <td>nil
 </td>
 <td>Teleports the Camera straight to the <code>x</code>, <code>y</code>, and <code>z</code> coordinates supplied, but does not account for whether the Camera will be stuck in this position.
 </tr>
 <tr>
-<td><span id=P_LineIsBlocking></span><code><b>P_LineIsBlocking</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mo, <i><a href=Line_t.html class=mw-redirect title="Line t">line_t</a></i> li)</code>
+<td><span id=P_LineIsBlocking></span><code><b>P_LineIsBlocking</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mo, <i><a href=Lua_Userdata_structures.html#line_t class=mw-redirect title="Line t">line_t</a></i> li)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns <code>true</code> if the supplied <code>line</code> would obstruct <code>mobj</code>'s movement.
 </tr>
 <tr>
-<td><code><b>P_GetSectorColormapAt</b>(<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
+<td><code><b>P_GetSectorColormapAt</b>(<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
 </td>
 <td><code><a href="https://wiki.srb2.org/w/index.php?title=Extracolormap_t&amp;action=edit&amp;redlink=1" class=new title="Extracolormap t (page does not exist)">extracolormap_t</a></code>
 </td>
@@ -3213,7 +3213,7 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><code><b>P_GetSectorLightLevelAt</b>(<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
+<td><code><b>P_GetSectorLightLevelAt</b>(<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
 </td>
 <td>int
 </td>
@@ -3240,7 +3240,7 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=P_ClosestPointOnLine></span><code><b>P_ClosestPointOnLine</b>(<i>fixed_t</i> x, <i>fixed_t</i> y, <i><a href=Line_t.html class=mw-redirect title="Line t">line_t</a></i> line)</code>
+<td><span id=P_ClosestPointOnLine></span><code><b>P_ClosestPointOnLine</b>(<i>fixed_t</i> x, <i>fixed_t</i> y, <i><a href=Lua_Userdata_structures.html#line_t class=mw-redirect title="Line t">line_t</a></i> line)</code>
 </td>
 <td>fixed_t, fixed_t
 </td>
@@ -3250,7 +3250,7 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=P_PointOnLineSide></span><code><b>P_PointOnLineSide</b>(<i>fixed_t</i> x, <i>fixed_t</i> y, <i><a href=Line_t.html class=mw-redirect title="Line t">line_t</a></i> line)</code>
+<td><span id=P_PointOnLineSide></span><code><b>P_PointOnLineSide</b>(<i>fixed_t</i> x, <i>fixed_t</i> y, <i><a href=Lua_Userdata_structures.html#line_t class=mw-redirect title="Line t">line_t</a></i> line)</code>
 </td>
 <td>int
 </td>
@@ -3271,7 +3271,7 @@ Calling the function with no arguments will clear the custom settings.
 <tr>
 <td><span id=P_SpawnMobj></span><code><b>P_SpawnMobj</b>(<i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z, <i>int</i> type)</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Creates and returns a new <a href=Object.html title=Object>Object</a> of the given type at the given coordinates <code>x</code>, <code>y</code>, and <code>z</code>. Various attributes may be given to it as soon as it is spawned, such as a <a href=Skin_color.html class=mw-redirect title="Skin color">skin color</a> or <a href=Object_flags.html#Secondary_flags class=mw-redirect title="Secondary Object flags">secondary Object flags</a>. Further Objects may be spawned within this function to be linked to the new Object if necessary. If the new Object is given the <code>MF_RUNSPAWNFUNC</code> flag during this function, the <a href=Actions.html title=Actions>action</a> set for the Object type's <code>SpawnState</code> property will be run by this function.
 <p>The hook <code><a href=Lua_Hooks.html#MobjSpawn title=Lua/Hooks>MobjSpawn</a></code> can be used to modify or replace some of the effects of this function.
@@ -3279,16 +3279,16 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=P_SpawnMobjFromMobj></span><code><b>P_SpawnMobjFromMobj</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> origin, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z, <i>int</i> type)</code>
+<td><span id=P_SpawnMobjFromMobj></span><code><b>P_SpawnMobjFromMobj</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> origin, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z, <i>int</i> type)</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Same as <code>P_SpawnMobj</code>, except the coordinates given are relative to the <code>origin</code> Object. The spawned object's scale and vertical flip are inherited from the origin object.
 <p><i>Note: The coordinates are automatically adjusted to <code>origin</code>'s scale. The new Object will copy the <code>origin</code>'s interpolation values, and will correct its z-position according to the <code>origin</code>'s gravity.</i>
 </p>
 </tr>
 <tr>
-<td><span id=P_RemoveMobj></span><code><b>P_RemoveMobj</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_RemoveMobj></span><code><b>P_RemoveMobj</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>nil
 </td>
@@ -3298,77 +3298,77 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=P_IsValidSprite2></span><code><b>P_IsValidSprite2</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>int</i> sprite2)</code>
+<td><span id=P_IsValidSprite2></span><code><b>P_IsValidSprite2</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>int</i> sprite2)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns true if <code>mobj</code> can display <code>sprite2</code>, false if not. This is specific to objects that have a <a href=Skin.html title=Skin>Skin</a>, as Skins use a special naming system to avoid naming conflicts between themselves.
 </tr>
 <tr>
-<td><span id=P_SpawnLockOn></span><code><b>P_SpawnLockOn</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> target, <i><a href=State_t.html class=mw-redirect title="State t">state_t</a></i> state)</code>
+<td><span id=P_SpawnLockOn></span><code><b>P_SpawnLockOn</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> target, <i><a href=Lua_Userdata_structures.html#state_t class=mw-redirect title="State t">state_t</a></i> state)</code>
 </td>
 <td>nil
 </td>
 <td>Spawns MT_LOCKON in <code>state</code> above <code>mobj</code>. Lua exclusive.
 </tr>
 <tr>
-<td><span id=P_SpawnMissile></span><code><b>P_SpawnMissile</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> dest, <i>int</i> type)</code>
+<td><span id=P_SpawnMissile></span><code><b>P_SpawnMissile</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> dest, <i>int</i> type)</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Spawns a missile Object with the default missile positioning, sending it forward to <code>dest</code> at the value of its <code>Speed</code> Object type property. This returns the Object spawned by the function.
 </tr>
 <tr>
-<td><span id=P_SpawnXYZMissile></span><code><b>P_SpawnXYZMissile</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> dest, <i>int</i> type, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
+<td><span id=P_SpawnXYZMissile></span><code><b>P_SpawnXYZMissile</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> dest, <i>int</i> type, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Spawns a missile Object at specific <code>x</code>, <code>y</code>, and <code>z</code> coordinates, sending it forward to <code>dest</code> at the value of its <code>Speed</code> Object type property. This returns the Object spawned by the function.
 </tr>
 <tr>
-<td><span id=P_SpawnPointMissile></span><code><b>P_SpawnPointMissile</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>fixed_t</i> dest_x, <i>fixed_t</i> dest_y, <i>fixed_t</i> dest_z, <i>int</i> type, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
+<td><span id=P_SpawnPointMissile></span><code><b>P_SpawnPointMissile</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>fixed_t</i> dest_x, <i>fixed_t</i> dest_y, <i>fixed_t</i> dest_z, <i>int</i> type, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z)</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Same as <code>P_SpawnXYZMissile</code>, except the destination is given via the coordinates <code>dest_x</code>, <code>dest_y</code> and <code>dest_z</code> instead of a destination Object <code>dest</code>. This returns the Object spawned by the function.
 </tr>
 <tr>
-<td><span id=P_SpawnAlteredDirectionMissile></span><code><b>P_SpawnAlteredDirectionMissile</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>int</i> type, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z, <i>int</i> angle_shift)</code>
+<td><span id=P_SpawnAlteredDirectionMissile></span><code><b>P_SpawnAlteredDirectionMissile</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>int</i> type, <i>fixed_t</i> x, <i>fixed_t</i> y, <i>fixed_t</i> z, <i>int</i> angle_shift)</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Spawns a missile Object at the value of its <code>Speed</code> Object type property, but with an angle relative to the direction its source Object is facing. The source Object <i>must</i> be a missile itself and must have a target set – the spawned missile will also use this target. This returns the Object spawned by the function.
 </tr>
 <tr>
-<td><span id=P_ColorTeamMissile></span><code><b>P_ColorTeamMissile</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> missile, <i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_ColorTeamMissile></span><code><b>P_ColorTeamMissile</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> missile, <i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>In <a href=Team_Match.html class=mw-redirect title="Team Match">Team Match</a> or <a href=CTF.html class=mw-redirect title=CTF>CTF</a>, this changes <code>missile</code>'s color to match the player's team color (red if player is in the red team, or steel blue if in the blue team). In any other gametype, this will do nothing.
 </tr>
 <tr>
-<td><span id=P_SPMAngle></span><code><b>P_SPMAngle</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>int</i> type, <i>angle_t</i> angle, [<i>int</i> allowaim, [<i>int</i> flags2]])</code>
+<td><span id=P_SPMAngle></span><code><b>P_SPMAngle</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>int</i> type, <i>angle_t</i> angle, [<i>int</i> allowaim, [<i>int</i> flags2]])</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Spawns a missile Object at the value of its <code>Speed</code> Object type property, assuming <code>source</code> is a player. <code>angle</code> sets what direction to fire the missile in. If <code>allowaim</code> is set to a non-zero value, the player's vertical aiming angle determines the vertical angle the missile is fired at. Otherwise, it is fired straight forward. <code>flags2</code> allows additional flags to be added on to the missile's <a href=Object_flags.html#Secondary_flags class=mw-redirect title="Secondary Object flags">secondary Object flags</a> (such as <code>MF2_RAILRING</code> to make the missile act like the rail ring weapon). This returns the Object spawned by the function.
 </tr>
 <tr>
-<td><span id=P_SpawnPlayerMissile></span><code><b>P_SpawnPlayerMissile</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>int</i> type, [<i>int</i> flags2])</code>
+<td><span id=P_SpawnPlayerMissile></span><code><b>P_SpawnPlayerMissile</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>int</i> type, [<i>int</i> flags2])</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Functionally identical to <code>P_SPMAngle</code>, except that the missile's angle will always be <code>source</code>'s angle and the player's vertical aiming angle will always be used. This returns the Object spawned by the function.
 </tr>
 <tr>
-<td><span id=P_MobjFlip></span><code><b>P_MobjFlip</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_MobjFlip></span><code><b>P_MobjFlip</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>int
 </td>
 <td>Returns -1 if the object is flipped (i.e., <code>MFE_VERTICALFLIP</code> is set in the Object's <a href=Object_flags.html#Extra_flags class=mw-redirect title="Extra Object flags">extra Object flags</a>) or 1 if it is not.
 </tr>
 <tr>
-<td><span id=P_GetMobjGravity></span><code><b>P_GetMobjGravity</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_GetMobjGravity></span><code><b>P_GetMobjGravity</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>fixed_t
 </td>
@@ -3382,16 +3382,16 @@ Calling the function with no arguments will clear the custom settings.
 <td>Returns true if the given Object type is any of the weapon ammo/panel types.
 </tr>
 <tr>
-<td><span id=P_FlashPal></span><code><b>P_FlashPal</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> type, <i>int</i> duration)</code>
+<td><span id=P_FlashPal></span><code><b>P_FlashPal</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> type, <i>int</i> duration)</code>
 </td>
 <td>nil
 </td>
 <td>Sets the type and duration of the player's <a href=Palette.html title=Palette>palette</a>. This is used in the game to flash the screen in events such as when the player is teleported, or when an <a href=Armageddon_Shield.html class=mw-redirect title="Armageddon Shield">Armageddon Shield</a> explodes – see <a href=PLAYPAL.html class=mw-redirect title=PLAYPAL>PLAYPAL</a> for the palette numbers available in the default <code>PLAYPAL</code> lump.
 </tr>
 <tr>
-<td><span id=P_GetClosestAxis></span><code><b>P_GetClosestAxis</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source)</code>
+<td><span id=P_GetClosestAxis></span><code><b>P_GetClosestAxis</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source)</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Returns the closest <a href=Axis.html title=Axis>Axis</a> Object (of type <code>MT_AXIS</code>) to <code>source</code>.
 </tr>
@@ -3414,56 +3414,56 @@ Calling the function with no arguments will clear the custom settings.
 <li><i>The horizontal rotation cannot be controlled by this function.</i></ul>
 </tr>
 <tr>
-<td><span id=P_BossTargetPlayer></span><code><b>P_BossTargetPlayer</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor, [<i>boolean</i> closest?])</code>
+<td><span id=P_BossTargetPlayer></span><code><b>P_BossTargetPlayer</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor, [<i>boolean</i> closest?])</code>
 </td>
 <td>boolean
 </td>
 <td>Used by <a href=Boss.html title=Boss>bosses</a> to search for players. Returns true if a player is targeted, false if not. If <code>closest</code> is true, the boss will target the closest player it can find, otherwise the boss will target the first player it finds.
 </tr>
 <tr>
-<td><span id=P_SupermanLook4Players></span><code><b>P_SupermanLook4Players</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
+<td><span id=P_SupermanLook4Players></span><code><b>P_SupermanLook4Players</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor)</code>
 </td>
 <td>boolean
 </td>
 <td>Similar to <code><a href=#P_LookForPlayers>P_LookForPlayers</a></code>, except <code>actor</code> can search anywhere in the map and even through walls.
 </tr>
 <tr>
-<td><span id=P_SetScale></span><code><b>P_SetScale</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> scale, [<i>boolean</i> instant?])</code>
+<td><span id=P_SetScale></span><code><b>P_SetScale</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> scale, [<i>boolean</i> instant?])</code>
 </td>
 <td>nil
 </td>
 <td>Sets <code>mobj</code>'s scale to a new value. Editing <code>mobj.scale</code> does the same thing – however, calling <code>P_SetScale</code> will not affect <code>mobj.destscale</code>, unlike editing <code>mobj.scale</code> directly.
 </tr>
 <tr>
-<td><span id=P_InsideANonSolidFFloor></span><code><b>P_InsideANonSolidFFloor</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i><a href=Ffloor_t.html class=mw-redirect title="Ffloor t">ffloor_t</a></i> rover)</code>
+<td><span id=P_InsideANonSolidFFloor></span><code><b>P_InsideANonSolidFFloor</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i><a href=Lua_Userdata_structures.html#ffloor_t class=mw-redirect title="Ffloor t">ffloor_t</a></i> rover)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns true if the given <a href=FOF.html class=mw-redirect title=FOF>FOF</a> exists and is non-solid, and <code>mobj</code> is inside it.
 </tr>
 <tr>
-<td><span id=P_CheckDeathPitCollide></span><code><b>P_CheckDeathPitCollide</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_CheckDeathPitCollide></span><code><b>P_CheckDeathPitCollide</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns true if <code>mobj</code> is touching a <a href=Death_pit.html title="Death pit">death pit</a> floor/ceiling.
 </tr>
 <tr>
-<td><span id=P_CheckSolidLava></span><code><b>P_CheckSolidLava</b>(<i><a href=Ffloor_t.html class=mw-redirect title="Ffloor t">ffloor_t</a></i> rover)</code>
+<td><span id=P_CheckSolidLava></span><code><b>P_CheckSolidLava</b>(<i><a href=Lua_Userdata_structures.html#ffloor_t class=mw-redirect title="Ffloor t">ffloor_t</a></i> rover)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns true if the FOF <code>rover</code> is a solid lava block.
 </tr>
 <tr>
-<td><span id=P_CanRunOnWater></span><code><b>P_CanRunOnWater</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i><a href=Ffloor_t.html class=mw-redirect title="Ffloor t">ffloor_t</a></i> rover)</code>
+<td><span id=P_CanRunOnWater></span><code><b>P_CanRunOnWater</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i><a href=Lua_Userdata_structures.html#ffloor_t class=mw-redirect title="Ffloor t">ffloor_t</a></i> rover)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns true if the FOF <code>rover</code> is a water block and <code>player</code> is able to run on top of it. This requires the player to be at running speed, but other criteria include whether they have the <a href=S_SKIN.html#ability title="S SKIN">swimming</a> or <a href=S_SKIN.html#flags title="S SKIN">running on water abilities</a>, or if they're currently super.
 </tr>
 <tr>
-<td><span id=P_MaceRotate></span><code><b>P_MaceRotate</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> center, <i>int</i> baserot, <i>int</i> baseprevrot)</code>
+<td><span id=P_MaceRotate></span><code><b>P_MaceRotate</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> center, <i>int</i> baserot, <i>int</i> baseprevrot)</code>
 </td>
 <td>nil
 </td>
@@ -3473,77 +3473,77 @@ Calling the function with no arguments will clear the custom settings.
 <li><b><code>baseprevrot</code></b>: Previous frame’s rotation angle, used to compute delta for smooth motion. Called during each tic to update rotating mace mechanisms.</ul>
 </tr>
 <tr>
-<td><span id=P_CreateFloorSpriteSlope></span><code><b>P_CreateFloorSpriteSlope</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_CreateFloorSpriteSlope></span><code><b>P_CreateFloorSpriteSlope</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>nil
 </td>
 <td>Creates <code><a href=Lua_Userdata_structures.html#pslope_t title="Lua/Userdata structures">pslope_t</a></code> userdata into <code>mobj</code> that allows it to render as a sloped floor sprite. It can then be accessed and manipulated in <code><i>mobj.floorspriteslope</i></code>.
 </tr>
 <tr>
-<td><span id=P_RemoveFloorSpriteSlope></span><code><b>P_RemoveFloorSpriteSlope</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_RemoveFloorSpriteSlope></span><code><b>P_RemoveFloorSpriteSlope</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>nil
 </td>
 <td>Wipes the <code><i>mobj.floorspriteslope</i></code> field from <code>mobj</code>, effectively ceasing its rendering as a sloped floor sprite. Recommended to use when a sloped floor sprite is no longer needed, since they can increase memory usage.
 </tr>
 <tr>
-<td><span id=P_RailThinker></span><code><b>P_RailThinker</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_RailThinker></span><code><b>P_RailThinker</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>boolean
 </td>
 <td>Used by the Rail Ring. Instantly moves <code>mobj</code> if it has a type of momentum, returns <code>true</code> if the movement has failed or <code>mobj</code> was removed by movement (like death pit, missile hits wall, etc.).
 </tr>
 <tr>
-<td><span id=P_XYMovement></span><code><b>P_XYMovement</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_XYMovement></span><code><b>P_XYMovement</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>nil
 </td>
 <td>Moves <code>mobj</code> through the X/Y coordinate if it has momentum.
 </tr>
 <tr>
-<td><span id=P_RingXYMovement></span><code><b>P_RingXYMovement</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_RingXYMovement></span><code><b>P_RingXYMovement</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>nil
 </td>
 <td>Used by rings. Moves <code>mobj</code> through the X/Y coordinate if it has momentum but it will always slides to the walls if it collides with one.
 </tr>
 <tr>
-<td><span id=P_SceneryXYMovement></span><code><b>P_SceneryXYMovement</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_SceneryXYMovement></span><code><b>P_SceneryXYMovement</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>nil
 </td>
 <td>Used by scenery objects. Moves <code>mobj</code> through the X/Y coordinate if it has momentum but it will always slides to the walls if it collides with one and it does not have friction on the air or with the flag <code>MF_NOCLIPHEIGHT</code>.
 </tr>
 <tr>
-<td><span id=P_ZMovement></span><code><b>P_ZMovement</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_ZMovement></span><code><b>P_ZMovement</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>boolean
 </td>
 <td>Moves <code>mobj</code> through the Z coordinate if it has momentum, returns <code>false</code> if <code>mobj</code> was killed/exploded/removed, <code>true</code> otherwise.
 </tr>
 <tr>
-<td><span id=P_RingZMovement></span><code><b>P_RingZMovement</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_RingZMovement></span><code><b>P_RingZMovement</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>nil
 </td>
 <td>Used by rings. Moves <code>mobj</code> through the Z coordinate if it has momentum. It has special functionallity to avoid getting clipped through FOFs
 </tr>
 <tr>
-<td><span id=P_SceneryZMovement></span><code><b>P_SceneryZMovement</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_SceneryZMovement></span><code><b>P_SceneryZMovement</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>boolean
 </td>
 <td>Used by scenery objects. Moves <code>mobj</code> through the Z coordinate if it has momentum, returns <code>false</code> if <code>mobj</code> was killed/exploded/removed, <code>true</code> otherwise. It has special functionallity to avoid getting clipped through FOFs, checking for gravity, collide with death pits, and ajusting with the floors/ceilling
 </tr>
 <tr>
-<td><span id=P_PlayerZMovement></span><code><b>P_PlayerZMovement</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_PlayerZMovement></span><code><b>P_PlayerZMovement</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>nil
 </td>
 <td>Used by players. Moves <code>mobj</code> through the Z coordinate if it has momentum. It has special functionallity to avoid getting clipped through FOFs, checking for gravity, play animations, have slope physics, and some NiGHTs logic.
 </tr>
 <tr>
-<td><span id=P_CheckSkyHit></span><code><b>P_CheckSkyHit</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mo, <i><a href=Line_t.html class=mw-redirect title="Line t">line_t</a></i> line)</code>
+<td><span id=P_CheckSkyHit></span><code><b>P_CheckSkyHit</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mo, <i><a href=Lua_Userdata_structures.html#line_t class=mw-redirect title="Line t">line_t</a></i> line)</code>
 </td>
 <td>boolean
 </td>
@@ -3559,9 +3559,9 @@ Calling the function with no arguments will clear the custom settings.
 <th>Description
 </tr>
 <tr>
-<td><span id=polyobjects.GetForNum></span><code><b>polyobjects.GetForNum</b>(<i><a href=Polyobj_t.html class=mw-redirect title="Polyobj t">polyobj_t</a></i> polyobject, <i>INT32</i> id)</code>
+<td><span id=polyobjects.GetForNum></span><code><b>polyobjects.GetForNum</b>(<i><a href=Lua_Userdata_structures.html#polyobj_t class=mw-redirect title="Polyobj t">polyobj_t</a></i> polyobject, <i>INT32</i> id)</code>
 </td>
-<td><code><a href=Polyobj_t.html class=mw-redirect title="Polyobj t">polyobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#polyobj_t class=mw-redirect title="Polyobj t">polyobj_t</a></code>
 </td>
 <td>Retrieves a polyobject by its numeric ID. Returns <code>nil</code> if no such polyobject exists.
 </table>
@@ -3575,14 +3575,14 @@ Calling the function with no arguments will clear the custom settings.
 <th>Description
 </tr>
 <tr>
-<td><span id=P_GetZAt></span><code><b>P_GetZAt</b>(<i><a href=Pslope_t.html class=mw-redirect title="Pslope t">pslope_t</a></i> slope, <i>fixed_t</i> x, <i>fixed_t</i> y, [<i>fixed_t</i> z])</code>
+<td><span id=P_GetZAt></span><code><b>P_GetZAt</b>(<i><a href=Lua_Userdata_structures.html#pslope_t class=mw-redirect title="Pslope t">pslope_t</a></i> slope, <i>fixed_t</i> x, <i>fixed_t</i> y, [<i>fixed_t</i> z])</code>
 </td>
 <td>fixed_t
 </td>
 <td>Returns the corresponding Z position on the slope for the X/Y coordinates given. If <code><i>slope</i></code> is nil, returns <code><i>z</i></code> instead.
 </tr>
 <tr>
-<td><span id=P_ButteredSlope></span><code><b>P_ButteredSlope</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_ButteredSlope></span><code><b>P_ButteredSlope</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>nil
 </td>
@@ -3598,14 +3598,14 @@ Calling the function with no arguments will clear the custom settings.
 <th>Description
 </tr>
 <tr>
-<td><span id=P_Thrust></span><code><b>P_Thrust</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>angle_t</i> angle, <i>fixed_t</i> move)</code>
+<td><span id=P_Thrust></span><code><b>P_Thrust</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>angle_t</i> angle, <i>fixed_t</i> move)</code>
 </td>
 <td>nil
 </td>
 <td>Boosts <code>mobj</code>'s horizontal momentum by the value of <code>move</code> in the direction of <code>angle</code>. Note that this will apply momentum <i>relatively</i>; i.e., all existing momentum applied to the Object in any direction is retained – if <code>P_Thrust</code> is used every tic, this can result in the Object accelerating in the given direction. If the Object has <code>MF2_TWOD</code>, only momentum in the X direction is modified – momentum in the Y direction is unaffected. To replace all existing momentum instead of adding to it, see <code><a href=#P_InstaThrust>P_InstaThrust</a></code>.
 </tr>
 <tr>
-<td><span id=P_SetMobjStateNF></span><code><b>P_SetMobjStateNF</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>int</i> statenum)</code>
+<td><span id=P_SetMobjStateNF></span><code><b>P_SetMobjStateNF</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>int</i> statenum)</code>
 </td>
 <td>boolean
 </td>
@@ -3614,70 +3614,70 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=P_DoSuperTransformation></span><code><b>P_DoSuperTransformation</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> giverings?])</code>
+<td><span id=P_DoSuperTransformation></span><code><b>P_DoSuperTransformation</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> giverings?])</code>
 </td>
 <td>nil
 </td>
 <td>Changes <code>player</code> into its Super form. If <code>giverings?</code> is true, the player is given 50 rings when the function runs. Note that the player still needs all seven <a href=Chaos_Emeralds.html class=mw-redirect title="Chaos Emeralds">Chaos Emeralds</a> as well as the SF_SUPER skin flag for this function to work.
 </tr>
 <tr>
-<td><span id=P_ExplodeMissile></span><code><b>P_ExplodeMissile</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> missile)</code>
+<td><span id=P_ExplodeMissile></span><code><b>P_ExplodeMissile</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> missile)</code>
 </td>
 <td>nil
 </td>
 <td>Death sequence for the <code>missile</code> Object. Halts <code>missile</code>'s momentum, alters its flags, plays its <code>DeathSound</code> and sets its state to <code>DeathState</code>. Does not do anything if the Object has <code>MF_NOCLIPTHING</code> set, as it is used as a dummy flag to indicate when a missile is already "dead".
 </tr>
 <tr>
-<td><span id=P_PlayerTouchingSectorSpecial></span><code><b>P_PlayerTouchingSectorSpecial</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> section, <i>int</i> specialnum)</code>
+<td><span id=P_PlayerTouchingSectorSpecial></span><code><b>P_PlayerTouchingSectorSpecial</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> section, <i>int</i> specialnum)</code>
 </td>
-<td><code><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></code>
 </td>
 <td>Checks if <code>player</code> is touching a sector with the specified <a href=Sector_types.html title="Sector types">sector special</a> from the specified section. If one is found, this will return the sector with the special. Also accounts for FOFs – if the found sector is an FOF, the FOF's control sector is returned.
 </tr>
 <tr>
-<td><span id=P_PlayerTouchingSectorSpecialFlag></span><code><b>P_PlayerTouchingSectorSpecialFlag</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> flags)</code>
+<td><span id=P_PlayerTouchingSectorSpecialFlag></span><code><b>P_PlayerTouchingSectorSpecialFlag</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> flags)</code>
 </td>
-<td><code><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></code>
 </td>
 <td>Checks if <code>player</code>if touching a sector with the specified <a href=Constants.html#Sector_special_flags_(SSF_*) title=Constants>sector special flags</a>. If one is found, this will return the sector with the special flags. Also counts for FOFs – if the found sector is a FOF, the FOF's control sector is returned.
 </tr>
 <tr>
-<td><span id=P_FindLowestFloorSurrounding></span><code><b>P_FindLowestFloorSurrounding</b>(<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector)</code>
+<td><span id=P_FindLowestFloorSurrounding></span><code><b>P_FindLowestFloorSurrounding</b>(<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector)</code>
 </td>
 <td>fixed_t
 </td>
 <td>Looks for the sector surrounding the current one whose floor height is lower than the current sector's floor height. If it is found, the floor height is returned. Otherwise, returns itself.
 </tr>
 <tr>
-<td><span id=P_FindHighestFloorSurrounding></span><code><b>P_FindHighestFloorSurrounding</b>(<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector)</code>
+<td><span id=P_FindHighestFloorSurrounding></span><code><b>P_FindHighestFloorSurrounding</b>(<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector)</code>
 </td>
 <td>fixed_t
 </td>
 <td>Looks for the sector surrounding the current one whose floor height is higher than the current sector's floor height. If it is found, the floor height is returned. Otherwise, returns itself.
 </tr>
 <tr>
-<td><span id=P_FindLowestCeilingSurrounding></span><code><b>P_FindLowestCeilingSurrounding</b>(<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector)</code>
+<td><span id=P_FindLowestCeilingSurrounding></span><code><b>P_FindLowestCeilingSurrounding</b>(<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector)</code>
 </td>
 <td>fixed_t
 </td>
 <td>Looks for the sector surrounding the current one whose ceiling height is lower than the current sector's ceiling height. If it is found, the ceiling height is returned. Otherwise, returns itself.
 </tr>
 <tr>
-<td><span id=P_FindHighestCeilingSurrounding></span><code><b>P_FindHighestCeilingSurrounding</b>(<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector)</code>
+<td><span id=P_FindHighestCeilingSurrounding></span><code><b>P_FindHighestCeilingSurrounding</b>(<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector)</code>
 </td>
 <td>fixed_t
 </td>
 <td>Looks for the sector surrounding the current one whose ceiling height is higher than the current sector's ceiling height. If it is found, the ceiling height is returned. Otherwise, returns itself.
 </tr>
 <tr>
-<td><span id=P_FindNextHighestFloor></span><code><b>P_FindNextHighestFloor</b>(<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector, [<i>fixed_t</i> currentheight])</code>
+<td><span id=P_FindNextHighestFloor></span><code><b>P_FindNextHighestFloor</b>(<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector, [<i>fixed_t</i> currentheight])</code>
 </td>
 <td>fixed_t
 </td>
 <td>Looks for a sector whose floor height is higher than the current sector's floor height. If it is found, the floor height is returned. Otherwise, returns itself.
 </tr>
 <tr>
-<td><span id=P_FindNextLowestFloor></span><code><b>P_FindNextLowestFloor</b>(<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector, [<i>fixed_t</i> currentheight])</code>
+<td><span id=P_FindNextLowestFloor></span><code><b>P_FindNextLowestFloor</b>(<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector, [<i>fixed_t</i> currentheight])</code>
 </td>
 <td>fixed_t
 </td>
@@ -3691,21 +3691,21 @@ Calling the function with no arguments will clear the custom settings.
 <td>Finds the first linedef number after <code>start</code> which has the specified linedef special and tag. <code>start</code> can be -1 to start from the first linedef onwards, or set to another linedef's number to carry on from perhaps the last linedef number found (<code>start</code> defaults to -1 if not set).
 </tr>
 <tr>
-<td><span id=P_SwitchWeather></span><code><b>P_SwitchWeather</b>(<i>int</i> weathernum, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=P_SwitchWeather></span><code><b>P_SwitchWeather</b>(<i>int</i> weathernum, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>nil
 </td>
 <td>Switches <a href=Weather.html class=mw-redirect title=Weather>weather</a> in-game with <code>weathernum</code> (use the <a href=Constants.html#Weather_types title=Constants><code>PRECIP_</code> constants</a>). If <code>player</code> is or not specified, the weather is applied globally for all players; otherwise, the weather is applied only for the specified player.
 </tr>
 <tr>
-<td><span id=P_LinedefExecute></span><code><b>P_LinedefExecute</b>(<i>int</i> tag, [<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> actor, [<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> caller]])</code>
+<td><span id=P_LinedefExecute></span><code><b>P_LinedefExecute</b>(<i>int</i> tag, [<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> actor, [<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> caller]])</code>
 </td>
 <td>nil
 </td>
 <td>Executes a <a href=Linedef_executor.html title="Linedef executor">linedef executor</a>. <code>tag</code> is the <a href=Tagging.html title=Tagging>tag</a> of the executor's <a href=Trigger_linedef.html class=mw-redirect title="Trigger linedef">trigger linedef</a>. If set, <code>actor</code> is the Object that activated it, and <code>caller</code> is the triggering sector.
 </tr>
 <tr>
-<td><span id=P_SpawnLightningFlash></span><code><b>P_SpawnLightningFlash</b>(<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector)</code>
+<td><span id=P_SpawnLightningFlash></span><code><b>P_SpawnLightningFlash</b>(<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector)</code>
 </td>
 <td>nil
 </td>
@@ -3719,9 +3719,9 @@ Calling the function with no arguments will clear the custom settings.
 <td>Fades all tagged sectors' lighting to a new value set by <code>destvalue</code>. <code>speed</code> determines how quickly the sector's light fades to the new value, using <code>ticbased</code> maked speed to determine the duration instead. Using <code>force</code> forcefully replaces already existing fade light thinkers on the tagged sectors.
 </tr>
 <tr>
-<td><span id=P_ThingOnSpecial3DFloor></span><code><b>P_ThingOnSpecial3DFloor</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_ThingOnSpecial3DFloor></span><code><b>P_ThingOnSpecial3DFloor</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
-<td><code><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></code>
 </td>
 <td>If <code>mobj</code> is on top of or inside an FOF with a sector special, this function returns the FOF's control sector; otherwise returns nil.
 <table cellpadding=2 style="width:auto;margin:1em auto;border:4px #BF6363 solid;background:#EFAFAF;padding:5px">
@@ -3732,16 +3732,16 @@ Calling the function with no arguments will clear the custom settings.
 </table>
 </tr>
 <tr>
-<td><span id=P_MobjTouchingSectorSpecial></span><code><b>P_MobjTouchingSectorSpecial</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>int</i> section, <i>int</i> number)</code>
+<td><span id=P_MobjTouchingSectorSpecial></span><code><b>P_MobjTouchingSectorSpecial</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>int</i> section, <i>int</i> number)</code>
 </td>
-<td><code><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></code>
 </td>
 <td>Checks if <code>mobj</code> is touching a sector with the specified <a href=Sector_types.html title="Sector types">sector special</a> from the specified section. If one is found, this will return the sector with the special. Also accounts for FOFs – if the found sector is an FOF, the FOF's control sector is returned.
 </tr>
 <tr>
-<td><span id=P_MobjTouchingSectorSpecialFlag></span><code><b>P_MobjTouchingSectorSpecialFlag</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>int</i> flags)</code>
+<td><span id=P_MobjTouchingSectorSpecialFlag></span><code><b>P_MobjTouchingSectorSpecialFlag</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>int</i> flags)</code>
 </td>
-<td><code><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></code>
 </td>
 <td>Checks if <code>mobj</code>if touching a sector with the specified <a href=Constants.html#Sector_special_flags_(SSF_*) title=Constants>sector special flags</a>. If one is found, this will return the sector with the special flags. Also counts for FOFs – if the found sector is a FOF, the FOF's control sector is returned.
 </tr>
@@ -3760,7 +3760,7 @@ Calling the function with no arguments will clear the custom settings.
 <td>Sets the <a href=Sky.html title=Sky>sky</a> seen in-game to the value of <code>skynum</code>. If <code>player</code> is nil or not specified, the sky is applied globally for all players; otherwise, the sky is applied only for the specified player.
 </tr>
 <tr>
-<td><span id=P_SetSkyboxMobj></span><code><b>P_SetSkyboxMobj</b>([<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, [<i>boolean/int</i> centerpoint?, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> user]]])</code>
+<td><span id=P_SetSkyboxMobj></span><code><b>P_SetSkyboxMobj</b>([<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, [<i>boolean/int</i> centerpoint?, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> user]]])</code>
 </td>
 <td>nil
 </td>
@@ -3781,7 +3781,7 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=EV_CrumbleChain></span><code><b>EV_CrumbleChain</b>([<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector,] <i><a href=Ffloor_t.html class=mw-redirect title="Ffloor t">ffloor_t</a></i> rover)</code>
+<td><span id=EV_CrumbleChain></span><code><b>EV_CrumbleChain</b>([<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector,] <i><a href=Lua_Userdata_structures.html#ffloor_t class=mw-redirect title="Ffloor t">ffloor_t</a></i> rover)</code>
 </td>
 <td>nil
 </td>
@@ -3791,7 +3791,7 @@ Calling the function with no arguments will clear the custom settings.
 </p>
 </tr>
 <tr>
-<td><span id=EV_StartCrumble></span><code><b>EV_StartCrumble</b>(<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> sector, <i><a href=Ffloor_t.html class=mw-redirect title="Ffloor t">ffloor_t</a></i> rover, [<i>boolean</i> floating, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>fixed_t</i> origalpha, [<i>boolean</i> crumblereturn]]]])</code>
+<td><span id=EV_StartCrumble></span><code><b>EV_StartCrumble</b>(<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> sector, <i><a href=Lua_Userdata_structures.html#ffloor_t class=mw-redirect title="Ffloor t">ffloor_t</a></i> rover, [<i>boolean</i> floating, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>fixed_t</i> origalpha, [<i>boolean</i> crumblereturn]]]])</code>
 </td>
 <td>boolean
 </td>
@@ -3807,21 +3807,21 @@ Calling the function with no arguments will clear the custom settings.
 <th>Description
 </tr>
 <tr>
-<td><span id=P_GetPlayerHeight></span><code><b>P_GetPlayerHeight</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_GetPlayerHeight></span><code><b>P_GetPlayerHeight</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>fixed_t
 </td>
 <td>Returns the player's normal height (default <code>48*FRACUNIT</code>, Fang's height is <code>60*FRACUNIT</code>). Automatically corrected to match the player's current scale.
 </tr>
 <tr>
-<td><span id=P_CheckPlayerSpinHeight></span><code><b>P_GetPlayerSpinHeight</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_CheckPlayerSpinHeight></span><code><b>P_GetPlayerSpinHeight</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>fixed_t
 </td>
 <td>Returns the player's "spin" height (2/3 of the player's full height; normally <code>32*FRACUNIT</code>). Automatically corrected to match the player's current scale.
 </tr>
 <tr>
-<td><span id=P_GetPlayerControlDirection></span><code><b>P_GetPlayerControlDirection</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_GetPlayerControlDirection></span><code><b>P_GetPlayerControlDirection</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>int
 </td>
@@ -3831,98 +3831,98 @@ Calling the function with no arguments will clear the custom settings.
 <li>2 – pressing in opposite direction of movement (decelerating)</ul>
 </tr>
 <tr>
-<td><span id=P_AddPlayerScore></span><code><b>P_AddPlayerScore</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount)</code>
+<td><span id=P_AddPlayerScore></span><code><b>P_AddPlayerScore</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount)</code>
 </td>
 <td>nil
 </td>
 <td>Adds <code>amount</code> to player's score. Also ensures that the score does not exceed <code>MAXSCORE</code> (999999990), and awards lives for every 50000 points (if not losing points). Handled somewhat differently for NiGHTS stages (both normal and Special Stages), modifying <code>player.marescore</code> instead of <code>player.score</code>.
 </tr>
 <tr>
-<td><span id=P_StealPlayerScore></span><code><b>P_StealPlayerScore</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount)</code>
+<td><span id=P_StealPlayerScore></span><code><b>P_StealPlayerScore</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount)</code>
 </td>
 <td>nil
 </td>
 <td>Causes <code>player</code> to steal from everyone else's score in multiplayer.
 </tr>
 <tr>
-<td><span id=P_GetJumpFlags></span><code><b>P_GetJumpFlags</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_GetJumpFlags></span><code><b>P_GetJumpFlags</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>int
 </td>
 <td>Checks whether <code>player</code>'s skin has <code>SF_NOJUMPDAMAGE</code> and returns the appropriate flags to set for their jump.
 </tr>
 <tr>
-<td><span id=P_PlayerInPain></span><code><b>P_PlayerInPain</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_PlayerInPain></span><code><b>P_PlayerInPain</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns true if <code>player</code> is in its pain state with <code>pw_flashing</code> set (and not sliding), false if not.
 </tr>
 <tr>
-<td><span id=P_DoPlayerPain></span><code><b>P_DoPlayerPain</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor]])</code>
+<td><span id=P_DoPlayerPain></span><code><b>P_DoPlayerPain</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, [<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor]])</code>
 </td>
 <td>nil
 </td>
 <td>Throws back the player, setting the state to the player's pain state (does not spill rings/emeralds/flags nor remove health/<a href=Shields.html title=Shields>shields</a>). <code>source</code> is the Object the damage (or <code>inflictor</code>) came from, and <code>inflictor</code> (which is either <code>source</code> itself or a projectile from it) the Object that dealt the damage, <code>inflictor</code> in particular being used to determine the throw-back speed depending on the flags set. Setting the <code>source</code> and <code>inflictor</code> Objects is not required.
 </tr>
 <tr>
-<td><span id=P_ResetPlayer></span><code><b>P_ResetPlayer</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_ResetPlayer></span><code><b>P_ResetPlayer</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Resets the player. This will halt anything the player is currently doing.
 </tr>
 <tr>
-<td><span id=P_PlayerCanDamage></span><code><b>P_PlayerCanDamage</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_PlayerCanDamage></span><code><b>P_PlayerCanDamage</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>boolean
 </td>
 <td>Checks if <code>player</code> is capable of damaging <code>mobj</code> in their current state and returns true if so.
 </tr>
 <tr>
-<td><span id=P_IsObjectInGoop></span><code><b>P_IsObjectInGoop</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_IsObjectInGoop></span><code><b>P_IsObjectInGoop</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>boolean
 </td>
 <td>Is <code>mobj</code> inside <a href=Linedef_type_124.html title="Linedef type 124">goop</a>? Returns true if yes, false if no. If the Object has <code>MF_NOGRAVITY</code> or is a spectator player, this will always return false.
 </tr>
 <tr>
-<td><span id=P_IsObjectOnGround></span><code><b>P_IsObjectOnGround</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_IsObjectOnGround></span><code><b>P_IsObjectOnGround</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>boolean
 </td>
 <td>Is <code>mobj</code> on the ground? Returns true if yes, false if no. The "ground" can be the Object's floorz or ceilingz depending on whether the Object is in reverse gravity or not. If the Object is currently within <a href=Linedef_type_124.html title="Linedef type 124">goop water</a>, this will always return false.
 </tr>
 <tr>
-<td><span id=P_InSpaceSector></span><code><b>P_InSpaceSector</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_InSpaceSector></span><code><b>P_InSpaceSector</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>boolean
 </td>
 <td>Is <code>mobj</code> in a <a href=Space_Countdown.html title="Space Countdown">Space Countdown</a> sector/FOF? Returns true if yes, false if no.
 </tr>
 <tr>
-<td><span id=P_InQuicksand></span><code><b>P_InQuicksand</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_InQuicksand></span><code><b>P_InQuicksand</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>boolean
 </td>
 <td>Is <code>mobj</code> in a <a href=Linedef_type_257.html title="Linedef type 257">Quicksand</a> FOF? Returns true if yes, false if no.
 </tr>
 <tr>
-<td><span id=P_InJumpFlipSector></span><code><b>P_InJumpFlipSector</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_InJumpFlipSector></span><code><b>P_InJumpFlipSector</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
 <td>boolean
 </td>
 <td>Is <code>mobj</code> in a <a href="https://wiki.srb2.org/w/index.php?title=Flip_Gravity_on_Jump&amp;action=edit&amp;redlink=1" class=new title="Flip Gravity on Jump (page does not exist)">Jump Flip</a> sector? Returns true if yes, false if no.
 </tr>
 <tr>
-<td><span id=P_SetObjectMomZ></span><code><b>P_SetObjectMomZ</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> momz, [<i>boolean</i> relative?])</code>
+<td><span id=P_SetObjectMomZ></span><code><b>P_SetObjectMomZ</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>fixed_t</i> momz, [<i>boolean</i> relative?])</code>
 </td>
 <td>nil
 </td>
 <td>Sets <code>mobj</code>'s <code>momz</code> to the value given. If <code>relative</code> is true, this will be added to the Object's previous <code>momz</code>; otherwise, it will replace it. (Note: This also corrects for scaling and reverse gravity.)
 </tr>
 <tr>
-<td><span id=P_SetObjectMomZ></span><code><b>P_IsLocalPlayer</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> mobj)</code>
+<td><span id=P_SetObjectMomZ></span><code><b>P_IsLocalPlayer</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> mobj)</code>
 </td>
 <td>boolean
 </td>
@@ -3932,91 +3932,91 @@ Always returns <code>true</code> on singleplayer.
 </p>
 </tr>
 <tr>
-<td><span id=P_RestoreMusic></span><code><b>P_RestoreMusic</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_RestoreMusic></span><code><b>P_RestoreMusic</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Restores the music to whatever it should be depending on whether <code>player</code> has any powerups or not.
 </tr>
 <tr>
-<td><span id=P_SpawnShieldOrb></span><code><b>P_SpawnShieldOrb</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_SpawnShieldOrb></span><code><b>P_SpawnShieldOrb</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Resets <code>player</code>'s <a href=Shield.html class=mw-redirect title=Shield>shield</a> orb appearance to the appropriate one for the player's current shield powers.
 </tr>
 <tr>
-<td><span id=P_SpawnGhostMobj></span><code><b>P_SpawnGhostMobj</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
+<td><span id=P_SpawnGhostMobj></span><code><b>P_SpawnGhostMobj</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj)</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Spawns a "ghost" of <code>mobj</code> (a 50% translucent clone of the Object that lasts only 8 tics normally before disappearing). Useful for creating afterimages of Objects such as players, such as with the <a href=Super_Sneakers.html class=mw-redirect title="Super Sneakers">Super Sneakers</a> power-up or when a player is in Super form. Returns the ghost Object spawned. If a player Object the ghost was made after possesses a <a href=S_SKIN.html#followitem title="S SKIN">followitem</a>, a ghost of that item's Object will additionally be spawned and assigned as the player ghost's tracer, and vice versa.
 </tr>
 <tr>
-<td><span id=P_GivePlayerRings></span><code><b>P_GivePlayerRings</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount)</code>
+<td><span id=P_GivePlayerRings></span><code><b>P_GivePlayerRings</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount)</code>
 </td>
 <td>nil
 </td>
 <td>Adds <code>amount</code> to <code>player</code>'s ring count. Also corrects ring count if &gt; 9999 or &lt; 0. Also awards extra life bonuses for multiples of 100 rings up to the value of <code>maxXtraLife</code> in the <code><a href=MainCfg.html title=MainCfg>MainCfg</a></code> block (by default this is 2, which allows for extra life bonuses up to 200 rings).
 </tr>
 <tr>
-<td><span id=P_GivePlayerLives></span><code><b>P_GivePlayerLives</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount)</code>
+<td><span id=P_GivePlayerLives></span><code><b>P_GivePlayerLives</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount)</code>
 </td>
 <td>nil
 </td>
 <td>Adds <code>amount</code> to <code>player</code>'s lives count. Also corrects lives count if &gt; 99 or &lt; 1.
 </tr>
 <tr>
-<td><span id=P_GivePlayerLives></span><code><b>P_GivePlayerSpheres</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount)</code>
+<td><span id=P_GivePlayerLives></span><code><b>P_GivePlayerSpheres</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount)</code>
 </td>
 <td>nil
 </td>
 <td>Adds <code>amount</code> to <code>player</code>'s sphere count. Also corrects sphere count if &gt; 9999 or &lt; 0.
 </tr>
 <tr>
-<td><span id=P_GiveCoopLives></span><code><b>P_GiveCoopLives</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount, [<i>boolean</i> playsound])</code>
+<td><span id=P_GiveCoopLives></span><code><b>P_GiveCoopLives</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> amount, [<i>boolean</i> playsound])</code>
 </td>
 <td>nil
 </td>
 <td>Adds <code>amount</code> to the lives pool if the game is using shared lives. When not using shared lives, adds <code>amount</code> of lives to all individual players.
 </tr>
 <tr>
-<td><span id=P_ResetScore></span><code><b>P_ResetScore</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_ResetScore></span><code><b>P_ResetScore</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Resets <code>player</code>'s <code>scoreadd</code> value to 0, ending any score chains in progress.
 </tr>
 <tr>
-<td><span id=P_DoJumpShield></span><code><b>P_DoJumpShield</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_DoJumpShield></span><code><b>P_DoJumpShield</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>If <code>player</code> has the shield power <code>SH_PROTECTELECTRIC</code>, this will activate the <a href=Lightning_Shield.html class=mw-redirect title="Lightning Shield">Lightning Shield</a>'s double jump. In any other case, <code>player</code> performs a <a href=Whirlwind_Shield.html class=mw-redirect title="Whirlwind Shield">Whirlwind Shield</a>-style jump and switches to their falling animations.
 </tr>
 <tr>
-<td><span id=P_DoBubbleBounce></span><code><b>P_DoBubbleBounce</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_DoBubbleBounce></span><code><b>P_DoBubbleBounce</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Landing handler for the <a href=Bubble_Shield.html class=mw-redirect title="Bubble Shield">Bubble Shield</a>. Bounces <code>player</code> upwards.
 </tr>
 <tr>
-<td><span id=P_BlackOw></span><code><b>P_BlackOw</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_BlackOw></span><code><b>P_BlackOw</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>This is used by the <a href=Armageddon_Shield.html class=mw-redirect title="Armageddon Shield">Armageddon Shield</a> to blow up enemies, flash the palettes of all players within the explosion radius (<code>1536*FRACUNIT</code>) and destroy the shield currently being held by <code>player</code>. Also plays the Armageddon explosion sound.
 </tr>
 <tr>
-<td><span id=P_ElementalFire></span><code><b>P_ElementalFire</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> cropcircle])</code>
+<td><span id=P_ElementalFire></span><code><b>P_ElementalFire</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> cropcircle])</code>
 </td>
 <td>nil
 </td>
 <td>Spawns two <a href=Elemental_Shield.html class=mw-redirect title="Elemental Shield">Elemental Shield</a>-style flames for both sides and behind <code>player</code>, but needs to be used repeatedly to spawn a true Elemental Shield fire trail. If <code>cropcircle</code> is true (default is <code>false</code>), this instead spawns flames in a circle pattern like that of the Elemental Shield's ground pound attack.
 </tr>
 <tr>
-<td><span id=P_DoPlayerFinish></span><code><b>P_DoPlayerFinish</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_DoPlayerFinish></span><code><b>P_DoPlayerFinish</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
@@ -4025,37 +4025,37 @@ Always returns <code>true</code> on singleplayer.
 </p>
 </tr>
 <tr>
-<td><span id=P_DoPlayerExit></span><code><b>P_DoPlayerExit</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> finishedflag])</code>
+<td><span id=P_DoPlayerExit></span><code><b>P_DoPlayerExit</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> finishedflag])</code>
 </td>
 <td>nil
 </td>
 <td>This is used to have <code>player</code> "complete" the level and become immobile; this will not immediately end the level itself, but prepares to end the level after a set amount of time. If <code>finishedflag</code> is true (default is <code>false</code>), this will set the flag <code>PF_FINISHED</code> on the <code>player</code>, allowing the <code>player</code> to get level completion bonuses and <a href=Record_Attack.html title="Record Attack">Record Attack</a> emblems.
 </tr>
 <tr>
-<td><span id=P_InstaThrust></span><code><b>P_InstaThrust</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>angle_t</i> angle, <i>fixed_t</i> move)</code>
+<td><span id=P_InstaThrust></span><code><b>P_InstaThrust</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj, <i>angle_t</i> angle, <i>fixed_t</i> move)</code>
 </td>
 <td>nil
 </td>
 <td>Set an Object's horizontal momentum to the value of <code>move</code> in the direction of <code>angle</code>. Note that this will apply momentum <i>absolutely</i>; i.e., all existing momentum applied to the Object in any direction is lost. If the Object has <code>MF2_TWOD</code>, only momentum in the X-direction is modified – momentum in the Y-direction is unaffected. To add to existing momentum rather than completely replace it, see <code><a href=#P_Thrust>P_Thrust</a></code>.
 </tr>
 <tr>
-<td><span id=P_ReturnThrustX></span><code><b>P_ReturnThrustX</b>([<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj], <i>angle_t</i> angle, <i>fixed_t</i> move)</code>
+<td><span id=P_ReturnThrustX></span><code><b>P_ReturnThrustX</b>([<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj], <i>angle_t</i> angle, <i>fixed_t</i> move)</code>
 </td>
 <td>fixed_t
 </td>
 <td>Returns the X component of a set thrust value at a specified angle. <code>mobj</code> is unused.
 </tr>
 <tr>
-<td><span id=P_ReturnThrustY></span><code><b>P_ReturnThrustY</b>([<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> mobj], <i>angle_t</i> angle, <i>fixed_t</i> move)</code>
+<td><span id=P_ReturnThrustY></span><code><b>P_ReturnThrustY</b>([<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> mobj], <i>angle_t</i> angle, <i>fixed_t</i> move)</code>
 </td>
 <td>fixed_t
 </td>
 <td>Returns the Y component of a set thrust value at a specified angle. <code>mobj</code> is unused.
 </tr>
 <tr>
-<td><span id=P_LookForEnemies></span><code><b>P_LookForEnemies</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> nonenemies, [<i>boolean</i> bullet]])</code>
+<td><span id=P_LookForEnemies></span><code><b>P_LookForEnemies</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> nonenemies, [<i>boolean</i> bullet]])</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Returns a nearby Object that <code>player</code> can hit, if one is found. This is used by the <code>CA_HOMINGTHOK</code> and <code>CA2_GUNSLINGER</code> character abilities, as well as the <a href=Attraction_Shield.html class=mw-redirect title="Attraction Shield">Attraction Shield</a>'s homing attack ability.
 <p>By default, this only looks for shootable <a href=Enemies.html class=mw-redirect title=Enemies>enemies</a> or <a href=Boss.html title=Boss>bosses</a> (not including the <a href=Deton.html title=Deton>Deton</a>), they must be within <code>RING_DIST</code> (= 512 fracunits) from the player's position, and they cannot be more than 24 fracunits above the player's z position. If <code>nonenemies</code> is <code>true</code> (default is <code>false</code>), this function will also look for springs and monitors. If <code>bullet</code> is <code>true</code> (default is <code>false</code>), the function can look upwards but is limited to a looking span of 30 degrees up or down, the searching distance is doubled (= 1024 fracunits), and monitors and Detons are included in the search.
@@ -4063,21 +4063,21 @@ Always returns <code>true</code> on singleplayer.
 </p>
 </tr>
 <tr>
-<td><span id=P_NukeEnemies></span><code><b>P_NukeEnemies</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>fixed_t</i> radius)</code>
+<td><span id=P_NukeEnemies></span><code><b>P_NukeEnemies</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>fixed_t</i> radius)</code>
 </td>
 <td>nil
 </td>
 <td>Instantly defeats all enemies and damages bosses (as well as players in shooting gametypes) within a radius around the <code>inflictor</code> Object (the Object causing the damage). The <code>source</code> Object is where <code>inflictor</code> came from, if not the <code>inflictor</code> itself.
 </tr>
 <tr>
-<td><span id=P_HomingAttack></span><code><b>P_HomingAttack</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> target)</code>
+<td><span id=P_HomingAttack></span><code><b>P_HomingAttack</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> target)</code>
 </td>
 <td>boolean
 </td>
 <td>The <code>source</code> Object faces the <code>target</code> Object and moves towards it; needs to be repeatedly used to work properly. <code>source</code>'s movement speed depends on what <code>source</code> is – players will move at 2/3 of their <code>actionspd</code> value, the <a href=Deton.html title=Deton>Deton</a> will move at 17/20 of the enemy player's <code>normalspeed</code> value, otherwise all other Objects will use their Object type's <code>Speed</code> value (a <code>threshold</code> of 32000 for the source cuts this in half). Returns <code>true</code> if the homing attack was successful, returns <code>false</code> if not.
 </tr>
 <tr>
-<td><span id=P_SuperReady></span><code><b>P_ResetCamera</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i><a href=Camera_t.html class=mw-redirect title="Camera t">camera_t</a></i> camera)</code>
+<td><span id=P_SuperReady></span><code><b>P_ResetCamera</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i><a href=Lua_Userdata_structures.html#camera_t class=mw-redirect title="Camera t">camera_t</a></i> camera)</code>
 </td>
 <td>nil
 </td>
@@ -4090,14 +4090,14 @@ Always returns <code>true</code> on singleplayer.
 </table>Resets <code>player</code>'s <code>camera</code>.
 </tr>
 <tr>
-<td><span id=P_SuperReady></span><code><b>P_SuperReady</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_SuperReady></span><code><b>P_SuperReady</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns true if the conditions are right for <code>player</code> to turn Super, false if not.
 </tr>
 <tr>
-<td><span id=P_DoJump></span><code><b>P_DoJump</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> soundandstate, [<i>boolean</i> allowflip]])</code>
+<td><span id=P_DoJump></span><code><b>P_DoJump</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>boolean</i> soundandstate, [<i>boolean</i> allowflip]])</code>
 </td>
 <td>nil
 </td>
@@ -4107,7 +4107,7 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 </p>
 </tr>
 <tr>
-<td><span id=P_DoSpinDashDust></span><code><b>P_DoSpinDashDust</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_DoSpinDashDust></span><code><b>P_DoSpinDashDust</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
@@ -4116,42 +4116,42 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 </p>
 </tr>
 <tr>
-<td><span id=P_SpawnThokMobj></span><code><b>P_SpawnThokMobj</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_SpawnThokMobj></span><code><b>P_SpawnThokMobj</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Spawns the <code>player</code>'s <code>thokitem</code> defined in <code>S_SKIN</code> at <code>player</code>'s location. Defaults to <code>MT_THOK</code> if no object is defined.
 </tr>
 <tr>
-<td><span id=P_SpawnSpinMobj></span><code><b>P_SpawnSpinMobj</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> type)</code>
+<td><span id=P_SpawnSpinMobj></span><code><b>P_SpawnSpinMobj</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> type)</code>
 </td>
 <td>nil
 </td>
 <td>Spawns a spin trail Object for <code>player</code> at <code>player</code>'s location. <code>type</code> determines the type of the Object spawned.
 </tr>
 <tr>
-<td><span id=P_Telekinesis></span><code><b>P_Telekinesis</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>fixed_t</i> thrust, <i>fixed_t</i> range)</code>
+<td><span id=P_Telekinesis></span><code><b>P_Telekinesis</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>fixed_t</i> thrust, <i>fixed_t</i> range)</code>
 </td>
 <td>nil
 </td>
 <td>Pushes away all enemies and players within a radius of <code>range</code> around <code>player</code> with the thrust value <code>thrust</code>. If <code>thrust</code> is negative, this will instead pull in enemies and players towards <code>player</code>.
 </tr>
 <tr>
-<td><span id=P_SwitchShield></span><code><b>P_SwitchShield</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> shield)</code>
+<td><span id=P_SwitchShield></span><code><b>P_SwitchShield</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> shield)</code>
 </td>
 <td>nil
 </td>
 <td>Switches the current <a href=Shield.html class=mw-redirect title=Shield>shield</a> <code>player</code> has with <code>shieldtype</code>. This will also cause an unused <a href=Armageddon_Shield.html class=mw-redirect title="Armageddon Shield">Armageddon Shield</a> to explode. For the list of possible shield types, see <a href=Constants.html#Shield_types title=Constants>Shield types</a>.
 </tr>
 <tr>
-<td><span id=P_PlayJingle></span><code><b>P_PlayJingle</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> jingletype)</code>
+<td><span id=P_PlayJingle></span><code><b>P_PlayJingle</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int</i> jingletype)</code>
 </td>
 <td>nil
 </td>
 <td>Calls <code><a href=#P_PlayJingleMusic>P_PlayJingleMusic</a></code> for the player <code>player</code> with the appropriate arguments as set by <code>jingletype</code>. <code>jingletype</code> should be one of the <code><a href=Constants.html#Jingle_types_(JT_*) title=Constants>JT_*</a></code> constants.
 </tr>
 <tr>
-<td><span id=P_PlayJingleMusic></span><code><b>P_PlayJingleMusic</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>string</i> musname, [<i>int</i> musflags, [<i>boolean</i> looping, [<i>int</i> jingletype]]])</code>
+<td><span id=P_PlayJingleMusic></span><code><b>P_PlayJingleMusic</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>string</i> musname, [<i>int</i> musflags, [<i>boolean</i> looping, [<i>int</i> jingletype]]])</code>
 </td>
 <td>nil
 </td>
@@ -4164,42 +4164,42 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 </table>
 </tr>
 <tr>
-<td><span id=P_SpawnSkidDust></span><code><b>P_SpawnSkidDust</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>fixed_t</i> radius, [<i>boolean</i> playsound])</code>
+<td><span id=P_SpawnSkidDust></span><code><b>P_SpawnSkidDust</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>fixed_t</i> radius, [<i>boolean</i> playsound])</code>
 </td>
 <td>nil
 </td>
 <td>Spawns spindash dust randomly around <code>player</code> within a certain <code>radius</code>, and plays Knuckles' sliding sound effect if <code>sound</code> is true.
 </tr>
 <tr>
-<td><span id=P_Earthquake></span><code><b>P_Earthquake</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor, <i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>fixed_t</i> radius)</code>
+<td><span id=P_Earthquake></span><code><b>P_Earthquake</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> inflictor, <i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i> source, <i>fixed_t</i> radius)</code>
 </td>
 <td>nil
 </td>
 <td>Damages enemies within the given <code>radius</code>. Used for Super Knuckles' landing.
 </tr>
 <tr>
-<td><span id=P_PlayerFullbright></span><code><b>P_PlayerFullbright</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_PlayerFullbright></span><code><b>P_PlayerFullbright</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns <code>true</code> only if <code>player</code> is fullbright. Used in NiGHTS mode.
 </tr>
 <tr>
-<td><span id=P_MovePlayer></span><code><b>P_MovePlayer</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_MovePlayer></span><code><b>P_MovePlayer</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>nil
 </td>
 <td>Makes <code>player</code> to handle the entire player movement.
 </tr>
 <tr>
-<td><span id=P_PlayerCanEnterSpinGaps></span><code><b>P_PlayerCanEnterSpinGaps</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_PlayerCanEnterSpinGaps></span><code><b>P_PlayerCanEnterSpinGaps</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>boolean
 </td>
 <td>Returns <code>true</code> if <code>player</code> can enter spin gaps after checking on any possible <code>PlayerCanEnterSpinGaps</code> hook and then SRB2's vanilla conditions.
 </tr>
 <tr>
-<td><span id=P_PlayerShouldUseSpinHeight></span><code><b>P_PlayerShouldUseSpinHeight</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player)</code>
+<td><span id=P_PlayerShouldUseSpinHeight></span><code><b>P_PlayerShouldUseSpinHeight</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player)</code>
 </td>
 <td>boolean
 </td>
@@ -4328,14 +4328,14 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 <tr>
 <td><span id=R_PointInSubsector></span><code><b>R_PointInSubsector</b>(<i>fixed_t</i> x, <i>fixed_t</i> y)</code>
 </td>
-<td><code><a href=Subsector_t.html class=mw-redirect title="Subsector t">subsector_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#subsector_t class=mw-redirect title="Subsector t">subsector_t</a></code>
 </td>
 <td>Returns the subsector that the given point is located in. Never returns nil, even if outside of the map.
 </tr>
 <tr>
 <td><span id=R_PointInSubsectorOrNil></span><code><b>R_PointInSubsectorOrNil</b>(<i>fixed_t</i> x, <i>fixed_t</i> y)</code>
 </td>
-<td><code><a href=Subsector_t.html class=mw-redirect title="Subsector t">subsector_t</a></code> or nil
+<td><code><a href=Lua_Userdata_structures.html#subsector_t class=mw-redirect title="Subsector t">subsector_t</a></code> or nil
 </td>
 <td>Same as <code><a href=#R_PointInSubsector>R_PointInSubsector</a></code>, but returns nil if point is not in subsector.
 </table>
@@ -4367,14 +4367,14 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 </p>
 </tr>
 <tr>
-<td><span id=R_SetPlayerSkin></span><code><b>R_SetPlayerSkin</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int/string</i> skin)</code>
+<td><span id=R_SetPlayerSkin></span><code><b>R_SetPlayerSkin</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int/string</i> skin)</code>
 </td>
 <td>nil
 </td>
 <td>Sets the player's skin. <code>skin</code> can be either a skin number or a skin name string.
 </tr>
 <tr>
-<td><span id=R_SkinUsable></span><code><b>R_SkinUsable</b>(<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, <i>int/string</i> skin)</code>
+<td><span id=R_SkinUsable></span><code><b>R_SkinUsable</b>(<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, <i>int/string</i> skin)</code>
 </td>
 <td>boolean
 </td>
@@ -4392,7 +4392,7 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 <th>Description
 </tr>
 <tr>
-<td><span id=S_StartSound></span><code><b>S_StartSound</b>([<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> origin], <i>int</i> soundnum, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_StartSound></span><code><b>S_StartSound</b>([<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> origin], <i>int</i> soundnum, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>nil
 </td>
@@ -4401,7 +4401,7 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 </p>
 </tr>
 <tr>
-<td><span id=S_StartSoundAtVolume></span><code><b>S_StartSoundAtVolume</b>([<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> origin], <i>int</i> soundnum, <i>UINT8</i> volume, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_StartSoundAtVolume></span><code><b>S_StartSoundAtVolume</b>([<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> origin], <i>int</i> soundnum, <i>UINT8</i> volume, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>nil
 </td>
@@ -4410,25 +4410,25 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 </p>
 </tr>
 <tr>
-<td><span id=S_StopSound></span><code><b>S_StopSound</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> origin)</code>
+<td><span id=S_StopSound></span><code><b>S_StopSound</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> origin)</code>
 </td>
 <td>nil
 </td>
 <td>Stops any sound that the given <code>origin</code> is playing.
 </tr>
 <tr>
-<td><span id=S_StopSoundByID></span><code><b>S_StopSoundByID</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> origin, <i>int</i> soundnum)</code>
+<td><span id=S_StopSoundByID></span><code><b>S_StopSoundByID</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> origin, <i>int</i> soundnum)</code>
 </td>
 <td>nil
 </td>
 <td>Stops the sound <code>soundnum</code> that <code>origin</code> may be playing.
 </tr>
 <tr>
-<td><span id=S_ChangeMusic></span><code><b>S_ChangeMusic</b>(<i>string</i> musicname, [<i>boolean</i> looping?, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>int</i> mflags, [<i>int</i> position, [<i>int</i> prefadems, [<i>int</i> fadeinms]]]]])</code>
+<td><span id=S_ChangeMusic></span><code><b>S_ChangeMusic</b>(<i>string</i> musicname, [<i>boolean</i> looping?, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>int</i> mflags, [<i>int</i> position, [<i>int</i> prefadems, [<i>int</i> fadeinms]]]]])</code>
 </td>
 <td>nil
 </td>
-<td><i>Alternative version</i>: <code><b>S_ChangeMusic</b>(<i>int</i> musicslot, [<i>boolean</i> looping?, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player, [<i>int</i> mflags, [<i>int</i> position, [<i>int</i> prefadems, [<i>int</i> fadeinms]]]]])</code>
+<td><i>Alternative version</i>: <code><b>S_ChangeMusic</b>(<i>int</i> musicslot, [<i>boolean</i> looping?, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player, [<i>int</i> mflags, [<i>int</i> position, [<i>int</i> prefadems, [<i>int</i> fadeinms]]]]])</code>
 <p>Changes the <a href=List_of_music.html title="List of music">music</a> to the specified music name or slot number. The music will loop unless <code>looping?</code> is specified and is false.
 <p><code>mflags</code> can be used to set flags for the music:
 </p>
@@ -4444,7 +4444,7 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 </p>
 </tr>
 <tr>
-<td><span id=S_SpeedMusic></span><code><b>S_SpeedMusic</b>(<i>fixed_t</i> musicspeed, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_SpeedMusic></span><code><b>S_SpeedMusic</b>(<i>fixed_t</i> musicspeed, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>nil
 </td>
@@ -4453,14 +4453,14 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 </p>
 </tr>
 <tr>
-<td><span id=S_StopMusic></span><code><b>S_StopMusic</b>([<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_StopMusic></span><code><b>S_StopMusic</b>([<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>nil
 </td>
 <td>Stops all music from playing.
 </tr>
 <tr>
-<td><span id=S_SetInternalMusicVolume></span><code><b>S_SetInternalMusicVolume</b>(<i>int</i> volume, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_SetInternalMusicVolume></span><code><b>S_SetInternalMusicVolume</b>(<i>int</i> volume, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>boolean
 </td>
@@ -4469,7 +4469,7 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 </p>
 </tr>
 <tr>
-<td><span id=S_StopFadingMusic></span><code><b>S_StopFadingMusic</b>([<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_StopFadingMusic></span><code><b>S_StopFadingMusic</b>([<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>boolean
 </td>
@@ -4478,17 +4478,17 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 </p>
 </tr>
 <tr>
-<td><span id=S_FadeMusic></span><code><b>S_FadeMusic</b>(<i>int</i> target_volume, <i>int</i> ms, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_FadeMusic></span><code><b>S_FadeMusic</b>(<i>int</i> target_volume, <i>int</i> ms, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>boolean
 </td>
-<td><i>Alternative version:</i> <code><b>S_FadeMusic</b>(<i>int</i> target_volume, <i>int</i> ms, [<i>int</i> source_volume, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player]])</code>
+<td><i>Alternative version:</i> <code><b>S_FadeMusic</b>(<i>int</i> target_volume, <i>int</i> ms, [<i>int</i> source_volume, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player]])</code>
 <p>Fades the current music track from source volume to target volume, 0-100%. If <code>source_volume</code> is not specified, the source volume is the current internal volume. <code>ms</code> is the length of the fade, measured in milliseconds. To set a time in seconds, multiply the time in seconds by the constant <code>MUSICRATE</code>; e.g.: <code>2*MUSICRATE</code> for 2 seconds.
 <p>Returns true if the fade was done for all players or the user's local player, returns false if not.
 </p>
 </tr>
 <tr>
-<td><span id=S_FadeOutStopMusic></span><code><b>S_FadeOutStopMusic</b>(<i>int</i> ms, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_FadeOutStopMusic></span><code><b>S_FadeOutStopMusic</b>(<i>int</i> ms, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>boolean
 </td>
@@ -4497,7 +4497,7 @@ if <code>allowflip</code>is set to true (the default value), determines if you s
 </p>
 </tr>
 <tr>
-<td><span id=S_OriginPlaying></span><code><b>S_OriginPlaying</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> origin)</code>
+<td><span id=S_OriginPlaying></span><code><b>S_OriginPlaying</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> origin)</code>
 </td>
 <td>boolean
 </td>
@@ -4536,7 +4536,7 @@ Example:
 </table>
 </tr>
 <tr>
-<td><span id=S_SoundPlaying></span><code><b>S_SoundPlaying</b>(<i><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></i> origin, <i>int</i> soundnum)</code>
+<td><span id=S_SoundPlaying></span><code><b>S_SoundPlaying</b>(<i><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></i>/<i><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></i> origin, <i>int</i> soundnum)</code>
 </td>
 <td>boolean
 </td>
@@ -4555,7 +4555,7 @@ Example:
 </table>
 </tr>
 <tr>
-<td><span id=S_StartMusicCaption></span><code><b>S_StartMusicCaption</b>(<i>string</i> caption, <i>tic_t</i> lifespan, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_StartMusicCaption></span><code><b>S_StartMusicCaption</b>(<i>string</i> caption, <i>tic_t</i> lifespan, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>nil
 </td>
@@ -4597,7 +4597,7 @@ Example:
 </p>
 </tr>
 <tr>
-<td><span id=S_MusicType></span><code><b>S_MusicType</b>([<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_MusicType></span><code><b>S_MusicType</b>([<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>
 </td>
@@ -4671,49 +4671,49 @@ Example:
 </p>
 </tr>
 <tr>
-<td><span id=S_MusicPlaying></span><code><b>S_MusicPlaying</b>([<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_MusicPlaying></span><code><b>S_MusicPlaying</b>([<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>boolean or nil
 </td>
 <td>Returns true if there is any music currently playing for <code>player</code>. Returns nil if no music is playing.
 </tr>
 <tr>
-<td><span id=S_MusicPaused></span><code><b>S_MusicPaused</b>([<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_MusicPaused></span><code><b>S_MusicPaused</b>([<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>boolean or nil
 </td>
 <td>Returns true if the music is currently pause for <code>player</code>. Returns nil if no music is playing.
 </tr>
 <tr>
-<td><span id=S_MusicName></span><code><b>S_MusicName</b>([<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_MusicName></span><code><b>S_MusicName</b>([<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>string or nil
 </td>
 <td>Returns the lump name of the music currently playing for <code>player</code> as a string. Returns nil if no music is playing.
 </tr>
 <tr>
-<td><span id=S_SetMusicLoopPoint></span><code><b>S_SetMusicLoopPoint</b>(UINT32 looppoint, [<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_SetMusicLoopPoint></span><code><b>S_SetMusicLoopPoint</b>(UINT32 looppoint, [<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>boolean
 </td>
 <td>Adds or overrides the music's <code>looppoint</code> to a different one for <code>player</code>, in milliseconds. Returns true if succeeded, returns false if either there is no music, or the music format is GameMusicEmu formats, MIDI format, OpenMPT formats, or the music isn't looping at all.
 </tr>
 <tr>
-<td><span id=S_GetMusicLoopPoint></span><code><b>S_GetMusicLoopPoint</b>([<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_GetMusicLoopPoint></span><code><b>S_GetMusicLoopPoint</b>([<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>UINT32
 </td>
 <td>Returns the music's <code>looppoint</code> from <code>player</code>, in miliseconds. If the music is either MIDI, OpenMPT format or no music is playing, it will return <code>0</code> instead.
 </tr>
 <tr>
-<td><span id=S_PauseMusic></span><code><b>S_PauseMusic</b>([<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_PauseMusic></span><code><b>S_PauseMusic</b>([<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>boolean
 </td>
 <td>Pauses the music for <code>player</code>. Returns true always, even if there is no music or if the music cannot be paused.
 </tr>
 <tr>
-<td><span id=S_ResumeMusic></span><code><b>S_ResumeMusic</b>([<i><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></i> player])</code>
+<td><span id=S_ResumeMusic></span><code><b>S_ResumeMusic</b>([<i><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></i> player])</code>
 </td>
 <td>boolean
 </td>
@@ -4741,14 +4741,14 @@ Example:
 <tr>
 <td><span id=players.iterate></span><code><b>players.iterate</b>()</code>
 </td>
-<td><code><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></code>
 </td>
 <td>Iterates over all <a href=Player.html title=Player>players</a> currently playing in the map. Note that <code><i>player</i>.mo</code> will return nil for spectating players.
 </tr>
 <tr>
 <td><span id=mobjs.iterate></span><code><b>mobjs.iterate</b>()</code>
 </td>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td>Iterates over all <a href=Object.html title=Object>Objects</a> in the map that use <code>P_MobjThinker</code>. This excludes all precipitation (rain and snow).
 <p>Note that this iterator is <i>extremely</i> slow due to the massive amount of thinkers in a typical map, and should not be used repeatedly so as not to cause framerate drops.
@@ -4757,14 +4757,14 @@ Example:
 <tr>
 <td><span id=skins.iterate></span><code><b>skins.iterate</b>()</code>
 </td>
-<td><code><a href=Skin_t.html class=mw-redirect title="Skin t">skin_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#skin_t class=mw-redirect title="Skin t">skin_t</a></code>
 </td>
 <td>Iterates over all valid <a href=Skin.html title=Skin>skins</a> loaded in the game.
 </tr>
 <tr>
 <td><span id=mapthings.iterate></span><code><b>mapthings.iterate</b>()</code>
 </td>
-<td><code><a href=Mapthing_t.html class=mw-redirect title="Mapthing t">mapthing_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mapthing_t class=mw-redirect title="Mapthing t">mapthing_t</a></code>
 </td>
 <td>Iterates over all map <a href=Thing.html title=Thing>Things</a> in the map. Remember that not all Objects will necessarily have a respective map Thing, and not all map Things will necessarily have a respective Object.
 </tr>
@@ -4778,7 +4778,7 @@ Example:
 <tr>
 <td><span id=sectors.iterate></span><code><b>sectors.iterate</b>()</code>
 </td>
-<td><code><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></code>
 </td>
 <td>Iterates over all <a href=Sector.html title=Sector>sectors</a> in the map.
 </tr>
@@ -4792,14 +4792,14 @@ Example:
 <tr>
 <td><span id=subsectors.iterate></span><code><b>subsectors.iterate</b>()</code>
 </td>
-<td><code><a href=Subsector_t.html class=mw-redirect title="Subsector t">subsector_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#subsector_t class=mw-redirect title="Subsector t">subsector_t</a></code>
 </td>
 <td>Iterates over all <a href=Subsector.html class=mw-redirect title=Subsector>subsectors</a> in the map.
 </tr>
 <tr>
 <td><span id=lines.iterate></span><code><b>lines.iterate</b>()</code>
 </td>
-<td><code><a href=Line_t.html class=mw-redirect title="Line t">line_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#line_t class=mw-redirect title="Line t">line_t</a></code>
 </td>
 <td>Iterates over all <a href=Linedef.html title=Linedef>linedefs</a> in the map.
 </tr>
@@ -4813,21 +4813,21 @@ Example:
 <tr>
 <td><span id=sides.iterate></span><code><b>sides.iterate</b>()</code>
 </td>
-<td><code><a href=Side_t.html class=mw-redirect title="Side t">side_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#side_t class=mw-redirect title="Side t">side_t</a></code>
 </td>
 <td>Iterates over all <a href=Sidedef.html title=Sidedef>sidedefs</a> in the map.
 </tr>
 <tr>
 <td><span id=vertexes.iterate></span><code><b>vertexes.iterate</b>()</code>
 </td>
-<td><code><a href=Vertex_t.html class=mw-redirect title="Vertex t">vertex_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#vertex_t class=mw-redirect title="Vertex t">vertex_t</a></code>
 </td>
 <td>Iterates over all <a href=Vertex.html title=Vertex>vertexes</a> in the map.
 </tr>
 <tr>
 <td><span id=polyobjects.iterate></span><code><b>polyobjects.iterate</b>()</code>
 </td>
-<td><code><a href=Polyobj_t.html class=mw-redirect title="Polyobj t">polyobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#polyobj_t class=mw-redirect title="Polyobj t">polyobj_t</a></code>
 </td>
 <td>Iterates over all <a href=PolyObject.html title=PolyObject>PolyObjects</a> in the map.
 </table>

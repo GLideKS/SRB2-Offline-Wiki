@@ -927,10 +927,10 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <p>Be warned though – if a custom variable is accessed elsewhere before the code that creates it is executed, Lua will print errors in the console and remove the hook the access happened in. For example, this issue can occur if custom variables are created in a <code>MapLoad</code> hook or a <code>MobjSpawn</code> hook for <code>MT_PLAYER</code>. If the Lua script is loaded mid-level, this will not happen until another map is loaded or the player respawns, respectively. If the custom variables are accessed in the meantime, they will not have been created yet and an error will occur.
 <p>Existing userdata types that can be given custom variables:
 </p>
-<ul><li><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code></li>
-<li><code><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></code></li>
-<li><code><a href=Mobjinfo_t.html class=mw-redirect title="Mobjinfo t">mobjinfo_t</a></code></li>
-<li><code><a href=Mapheader_t.html class=mw-redirect title="Mapheader t">mapheader_t</a></code> can be supplied custom variables via <a href=SOC.html title=SOC>SOC</a> lumps. Custom variable names should be prefixed with <code>Lua.</code> in a map's <a href=Level_header.html title="Level header">level header</a>. In Lua scripts, they must be referred to in <i>all-lowercase</i> to be recognized properly.</ul>
+<ul><li><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code></li>
+<li><code><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></code></li>
+<li><code><a href=Lua_Userdata_structures.html#mobjinfo_t class=mw-redirect title="Mobjinfo t">mobjinfo_t</a></code></li>
+<li><code><a href=Lua_Userdata_structures.html#mapheader_t class=mw-redirect title="Mapheader t">mapheader_t</a></code> can be supplied custom variables via <a href=SOC.html title=SOC>SOC</a> lumps. Custom variable names should be prefixed with <code>Lua.</code> in a map's <a href=Level_header.html title="Level header">level header</a>. In Lua scripts, they must be referred to in <i>all-lowercase</i> to be recognized properly.</ul>
 <h3><span class=mw-headline id=Modifying_existing_variables>Modifying existing variables</span></h3>
 <ul><li>Syntax:
 <dl><dd><code><i>variable</i> = <i>newvalue</i></code></dl></ul>
@@ -1341,7 +1341,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <span class=kr>end</span>
 </pre></div>
 <p><code><i>list</i></code> is the list being iterated through (only specific ones can be used, with <code>.iterate</code> required to iterate through them), <code><i>name</i></code> is the variable name for each of the items in the list to perform the contents of the loop on.
-<p>Uniquely for <code><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></code> userdata, <code><i>sector</i>.ffloors()</code> and <code><i>sector</i>.thinglist()</code> (for an example <code>sector_t</code> userdata variable <code><i>sector</i></code>) also can be iterated through – <code><i>sector</i>.ffloors()</code> will iterate though all FOFs (<code><a href=Lua_Userdata_structures.html#ffloor_t title="Lua/Userdata structures">ffloor_t</a></code>) in the sector, and <code><i>sector</i>.thinglist()</code> through all Objects (<code><a href=Lua_Userdata_structures.html#mobj_t title="Lua/Userdata structures">mobj_t</a></code>) in the sector.
+<p>Uniquely for <code><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></code> userdata, <code><i>sector</i>.ffloors()</code> and <code><i>sector</i>.thinglist()</code> (for an example <code>sector_t</code> userdata variable <code><i>sector</i></code>) also can be iterated through – <code><i>sector</i>.ffloors()</code> will iterate though all FOFs (<code><a href=Lua_Userdata_structures.html#ffloor_t title="Lua/Userdata structures">ffloor_t</a></code>) in the sector, and <code><i>sector</i>.thinglist()</code> through all Objects (<code><a href=Lua_Userdata_structures.html#mobj_t title="Lua/Userdata structures">mobj_t</a></code>) in the sector.
 </p>
 <h2><span id=Metatables.2C_metatable_events_and_metamethods></span><span class=mw-headline id=Metatables,_metatable_events_and_metamethods>Metatables, metatable events and metamethods</span></h2>
 <dl><dd><div class=noprint><i>Main article: <a href=Lua_Metatables.html title=Lua/Metatables>Lua/Metatables</a></i></div></dl>

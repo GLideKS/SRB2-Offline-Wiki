@@ -617,7 +617,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>redflag</code>
 </th>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td style=background:#F99;vertical-align:middle;text-align:center class=table-no>Read-only
 </td>
@@ -626,7 +626,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>blueflag</code>
 </th>
-<td><code><a href=Mobj_t.html class=mw-redirect title="Mobj t">mobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobj_t class=mw-redirect title="Mobj t">mobj_t</a></code>
 </td>
 <td style=background:#F99;vertical-align:middle;text-align:center class=table-no>Read-only
 </td>
@@ -635,7 +635,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>rflagpoint</code>
 </th>
-<td><code><a href=Mapthing_t.html class=mw-redirect title="Mapthing t">mapthing_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mapthing_t class=mw-redirect title="Mapthing t">mapthing_t</a></code>
 </td>
 <td style=background:#F99;vertical-align:middle;text-align:center class=table-no>Read-only
 </td>
@@ -644,7 +644,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>bflagpoint</code>
 </th>
-<td><code><a href=Mapthing_t.html class=mw-redirect title="Mapthing t">mapthing_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mapthing_t class=mw-redirect title="Mapthing t">mapthing_t</a></code>
 </td>
 <td style=background:#F99;vertical-align:middle;text-align:center class=table-no>Read-only
 </td>
@@ -936,7 +936,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 </td>
 <td style=background:#F99;vertical-align:middle;text-align:center class=table-no>Read-only
 </td>
-<td>The amount of time that has passed in the current level since it has been loaded, measured in tics. In most <a href=Gametypes.html class=mw-redirect title=Gametypes>gametypes</a>, this is normally equal to the time displayed on the <a href=HUD.html class=mw-redirect title=HUD>HUD</a> (when converted to tics). However, in <a href=Race.html title=Race>Race</a> and <a href=Competition.html title=Competition>Competition</a> modes, <code>leveltime</code> includes the 4-second pre-timer, meaning that <code>leveltime</code> will be <code>4*TICRATE</code> tics ahead of the HUD's displayed time once the latter has started running. Note that <code>leveltime</code> will continue to increase after the level is finished, even after the HUD time has stopped, until the tally screen appears. The <i>actual</i> time displayed on the player's HUD is set by <code><i>player</i>.realtime</code> (see <code><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></code>).
+<td>The amount of time that has passed in the current level since it has been loaded, measured in tics. In most <a href=Gametypes.html class=mw-redirect title=Gametypes>gametypes</a>, this is normally equal to the time displayed on the <a href=HUD.html class=mw-redirect title=HUD>HUD</a> (when converted to tics). However, in <a href=Race.html title=Race>Race</a> and <a href=Competition.html title=Competition>Competition</a> modes, <code>leveltime</code> includes the 4-second pre-timer, meaning that <code>leveltime</code> will be <code>4*TICRATE</code> tics ahead of the HUD's displayed time once the latter has started running. Note that <code>leveltime</code> will continue to increase after the level is finished, even after the HUD time has stopped, until the tally screen appears. The <i>actual</i> time displayed on the player's HUD is set by <code><i>player</i>.realtime</code> (see <code><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></code>).
 </tr>
 <tr>
 <th><code>sstimer</code>
@@ -968,7 +968,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>server</code>
 </th>
-<td><code><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></code>
 </td>
 <td style=background:#F99;vertical-align:middle;text-align:center class=table-no>Read-only
 </td>
@@ -1094,7 +1094,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>consoleplayer</code>
 </th>
-<td><code><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></code>
 </td>
 <td style=background:#F99;vertical-align:middle;text-align:center class=table-no>Read-only
 </td>
@@ -1103,7 +1103,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>displayplayer</code>
 </th>
-<td><code><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></code>
 </td>
 <td style=background:#9F9;vertical-align:middle;text-align:center class=table-yes>Read+Write
 </td>
@@ -1112,7 +1112,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>secondarydisplayplayer</code>
 </th>
-<td><code><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></code>
 </td>
 <td style=background:#F99;vertical-align:middle;text-align:center class=table-no>Read-only
 </td>
@@ -1139,7 +1139,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>camera</code>
 </th>
-<td><code><a href=Camera_t.html class=mw-redirect title="Camera t">camera_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#camera_t class=mw-redirect title="Camera t">camera_t</a></code>
 </td>
 <td style=background:#FFB;vertical-align:middle;text-align:center;white-space:nowrap class=table-partial><i>Userdata:</i> Read-only<br><i>Userdata variables:</i> Read+Write
 </td>
@@ -1148,7 +1148,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>camera2</code>
 </th>
-<td><code><a href=Camera_t.html class=mw-redirect title="Camera t">camera_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#camera_t class=mw-redirect title="Camera t">camera_t</a></code>
 </td>
 <td style=background:#FFB;vertical-align:middle;text-align:center;white-space:nowrap class=table-partial><i>Userdata:</i> Read-only<br><i>Userdata variables:</i> Read+Write
 </td>
@@ -1157,7 +1157,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>mouse</code>
 </th>
-<td><code><a href=Mouse_t.html class=mw-redirect title="Mouse t">mouse_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mouse_t class=mw-redirect title="Mouse t">mouse_t</a></code>
 </td>
 <td style=background:#F99;vertical-align:middle;text-align:center class=table-no>Read-only
 </td>
@@ -1166,7 +1166,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>mouse2</code>
 </th>
-<td><code><a href=Mouse_t.html class=mw-redirect title="Mouse t">mouse_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mouse_t class=mw-redirect title="Mouse t">mouse_t</a></code>
 </td>
 <td style=background:#F99;vertical-align:middle;text-align:center class=table-no>Read-only
 </td>
@@ -1208,7 +1208,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>mobjinfo</code>
 </th>
-<td><code><a href=Mobjinfo_t.html class=mw-redirect title="Mobjinfo t">mobjinfo_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mobjinfo_t class=mw-redirect title="Mobjinfo t">mobjinfo_t</a></code>
 </td>
 <td><code>mobjinfo[<i>MT_NAME</i>]</code>
 </td>
@@ -1231,7 +1231,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>states</code>
 </th>
-<td><code><a href=State_t.html class=mw-redirect title="State t">state_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#state_t class=mw-redirect title="State t">state_t</a></code>
 </td>
 <td><code>states[<i>S_NAME</i>]</code>
 </td>
@@ -1253,7 +1253,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>sfxinfo</code><br>(<i>alt.: <code>S_sfx</code></i>)
 </th>
-<td><code><a href=Sfxinfo_t.html class=mw-redirect title="Sfxinfo t">sfxinfo_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#sfxinfo_t class=mw-redirect title="Sfxinfo t">sfxinfo_t</a></code>
 </td>
 <td><code>sfxinfo[<i>sfx_name</i>]</code>
 </td>
@@ -1296,7 +1296,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>players</code>
 </th>
-<td><code><a href=Player_t.html class=mw-redirect title="Player t">player_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#player_t class=mw-redirect title="Player t">player_t</a></code>
 </td>
 <td><code>players[<i>playernum</i>]</code>
 </td>
@@ -1307,7 +1307,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>skins</code>
 </th>
-<td><code><a href=Skin_t.html class=mw-redirect title="Skin t">skin_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#skin_t class=mw-redirect title="Skin t">skin_t</a></code>
 </td>
 <td><code>skins[<i>skinnum</i>]</code><br><i>or</i> <code>skins["<i>skinname</i>"]</code>
 </td>
@@ -1329,7 +1329,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>mapthings</code>
 </th>
-<td><code><a href=Mapthing_t.html class=mw-redirect title="Mapthing t">mapthing_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mapthing_t class=mw-redirect title="Mapthing t">mapthing_t</a></code>
 </td>
 <td><code>mapthings[<i>i</i>]</code>
 </td>
@@ -1340,7 +1340,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>vertexes</code>
 </th>
-<td><code><a href=Vertex_t.html class=mw-redirect title="Vertex t">vertex_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#vertex_t class=mw-redirect title="Vertex t">vertex_t</a></code>
 </td>
 <td><code>vertexes[<i>i</i>]</code>
 </td>
@@ -1351,7 +1351,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>lines</code>
 </th>
-<td><code><a href=Line_t.html class=mw-redirect title="Line t">line_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#line_t class=mw-redirect title="Line t">line_t</a></code>
 </td>
 <td><code>lines[<i>i</i>]</code>
 </td>
@@ -1362,7 +1362,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>sides</code>
 </th>
-<td><code><a href=Side_t.html class=mw-redirect title="Side t">side_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#side_t class=mw-redirect title="Side t">side_t</a></code>
 </td>
 <td><code>sides[<i>i</i>]</code>
 </td>
@@ -1373,7 +1373,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>subsectors</code>
 </th>
-<td><code><a href=Subsector_t.html class=mw-redirect title="Subsector t">subsector_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#subsector_t class=mw-redirect title="Subsector t">subsector_t</a></code>
 </td>
 <td><code>subsectors[<i>i</i>]</code>
 </td>
@@ -1384,7 +1384,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>sectors</code>
 </th>
-<td><code><a href=Sector_t.html class=mw-redirect title="Sector t">sector_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#sector_t class=mw-redirect title="Sector t">sector_t</a></code>
 </td>
 <td><code>sectors[<i>i</i>]</code>
 </td>
@@ -1395,7 +1395,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>polyobjects</code>
 </th>
-<td><code><a href=Polyobj_t.html class=mw-redirect title="Polyobj t">polyobj_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#polyobj_t class=mw-redirect title="Polyobj t">polyobj_t</a></code>
 </td>
 <td><code>polyobjects[<i>i</i>]</code>
 </td>
@@ -1406,7 +1406,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>mapheaderinfo</code>
 </th>
-<td><code><a href=Mapheader_t.html class=mw-redirect title="Mapheader t">mapheader_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#mapheader_t class=mw-redirect title="Mapheader t">mapheader_t</a></code>
 </td>
 <td><code>mapheaderinfo[<i>i</i>]</code>
 </td>
@@ -1417,7 +1417,7 @@ You can view its source [Alt+Mayús.+e]" accesskey=e><span>View source</span></a
 <tr>
 <th><code>hudinfo</code>
 </th>
-<td><code><a href=Hudinfo_t.html class=mw-redirect title="Hudinfo t">hudinfo_t</a></code>
+<td><code><a href=Lua_Userdata_structures.html#hudinfo_t class=mw-redirect title="Hudinfo t">hudinfo_t</a></code>
 </td>
 <td><code>hudinfo[<i>HUD_NAME</i>]</code>
 </td>
